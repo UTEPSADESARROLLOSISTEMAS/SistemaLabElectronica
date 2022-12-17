@@ -1,0 +1,151 @@
+/*---------------Menu lateral-------------*/
+
+#boton_desplegarMenu{
+
+    display: none;
+  
+}
+#boton_desplegarMenu:checked ~ .BloqueLateral{
+    opacity: 1;
+    visibility: visible;
+}
+#boton_desplegarMenu:checked ~ .BloqueLateral .BloqueLateral-Contenedor{
+    transform: translateX(0%);
+}
+.BloqueLateral{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color: #000000a5;
+    height: 100%;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.BloqueLateral label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.BloqueLateral-Contenedor{
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+.BloqueLateral-Contenedor hr{
+    margin: 0px 10%;
+}
+.BloqueLateral-Contenedor .Navegador{
+    width: 100%;
+}
+.BloqueLateral-Contenedor .Navegador .Perfil{
+    padding-top: 30px;
+
+}
+.BloqueLateral-Contenedor .Navegador .Perfil svg{
+    
+    max-width: 50px;
+    max-height: 50px;
+    width: 40px;
+    height: 40px;
+    min-width: 10px;
+    min-height: 10px;
+
+}
+.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor div{
+    padding: 0px 10px;
+    display: inline-block;
+
+}
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones svg{
+    
+    max-width: 50px;
+    max-height: 50px;
+    width: 40px;
+    height: 40px;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0px 20px;
+
+}
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion{
+    padding: 5px 0px;
+    color: black;
+    border-radius: 20px;
+    fill: #cf152d;
+
+}
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion svg{
+    
+    max-width: 50px;
+    max-height: 50px;
+    width: 40px;
+    height: 40px;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0px 20px;
+}
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    cursor: pointer;
+    
+}
+
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion:hover{
+    background-color: #cf152d;
+    color: white;
+    
+    fill: white;
+}
+
+/*Pestaña opcion De Tablero*/
+.nav-div-ContenedorDeOpciones{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav-div-ContenedorDeOpciones-contenido{
+    display: flex;
+    border-radius: 20px;
+}
+.nav-div-ContenedorDeOpciones-Subcontenido:hover{
+    background-color: #cf152d;
+    color: white;
+    fill: white;
+    cursor: pointer;
+}
+
+.nav-div-ContenedorDeOpciones-Subcontenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 20px;
+}
+
+.nav-div-ContenedorDeOpciones1_1{
+    width: 50%;
+}
+.nav-div-ContenedorDeOpciones1_2{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/*Fin de Menù lateral*/

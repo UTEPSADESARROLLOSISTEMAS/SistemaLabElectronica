@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #CCC3C3;
+
+}
+
+/* Estilos Generales */
+
+.ElementoCentradoHorizontal_y_Vertical{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divTextoCentradoVertical_y_Horizontal{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.divTextoCentradoVerticalYHorizontal_sinFlex{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.DivConDisplayFlex{
+    display: flex;
+}
+.divConWidthAl50{
+    width: 49.2%;
+    min-width: 360px;
+}
+.DivConDisplayInlineBlock{
+    display: inline-block;
+    
+}
+
+.ElementoAlaDerecha{
+    
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    align-items: center;
+}
+.divTextoAlaDerecha{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    align-items: center;
+}
+
+.divContenedorVerde{
+    background-color: #13A53C;
+}
+.divContenedorAmarillo{
+    background-color: #D2C54F;
+}
+.divContenedorRojo{
+    background-color: #D61F31;
+}
+.divContenedorMorado{
+    background-color: #8E09CC;
+}
+
+
+.fill_Color_Verde{
+    fill: #13A53C;
+}
+.fill_Color_Amarillo{
+    fill: #D2C54F;
+}
+.fill_Color_Rojo{
+    fill: #D61F31;
+}
+.fill_Color_Morado{
+    fill: #8E09CC;
+}
+.fill_Color_Azul{
+    fill: #4462FF;
+}
+
+
+.Columna_50{
+    width: 49.5%;
+}
+
+.Columna_25{
+    width: 25%;
+}
+.Columna_20{
+    width: 20%;
+}
+
+.Columna_15{
+    width: 15%;
+}
+
+.Columna_10{
+    width: 10%;
+}
+
+
+
+.Elemento_al_75Porciento{
+    width: 75%;
+}
+.Elemento_al_50Porciento{
+    width: 50%;
+}
+.Elemento_al_20Porciento{
+    width: 20%;
+}
+
+.Elemento_al_15Porciento{
+    width: 15%;
+}

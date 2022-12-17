@@ -1,0 +1,148 @@
+/* Estilos del Bloque SubPrincipal 1*/
+.Bloque_SubPrincipal_1{
+    width: 100%;
+    height: 100%;
+
+}
+
+.DivDatoExtraido{
+    min-width: 320px;
+    width: 24.5%;
+    margin: 5px 2px;
+    display: inline-block;
+}
+.DivDatoExtraido hr{
+    margin: 0px 30px;
+}
+.Bloque_SubPrincipal_1_div_ContenedorIcono{
+    position: absolute;
+    border-radius: 20px;
+    margin-left: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+
+
+}
+.Bloque_SubPrincipal_1_div_ContenedorIcono svg{
+    fill: white;
+    margin: 10px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 20px;
+    min-height: 20px;
+
+}
+
+.divContenedorDatosExtraidos_BloquePrincipal1{
+    background-color: white;
+    height: 100%;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 20px;
+
+
+}
+.divContenedorDatosExtraidos1_1{
+    height: fit-content;
+}
+.divContenedorDatosExtraidos1_1 div{
+
+    height: 33%;
+}
+
+
+/* Estilos del Bloque SubPrincipal 2*/
+
+.Bloque_SubPrincipal_2{
+
+
+    min-width: 320px;
+    width: 100%;
+}
+.Bloque_SubPrincipal_2 .DivConlaTabla{
+
+    background-color: white;
+    border-radius: 20px;
+    overflow: auto;
+    
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
+
+}
+.TablaMadre{
+    width: 100%;
+    min-width: 320px;
+}
+.TablaMadre_SubTabla_1{
+
+    min-width: 320px;
+    width: 100%;
+}
+.TablaMadre_SubTabla_1 tr{
+    color:black;
+    justify-content: center;
+    
+}
+.Div_DeLa_SubTabla{
+    width:100%;
+    min-width: 320px; 
+    height:200px; 
+    overflow:auto;
+    text-align: center;
+}
+.SubTabla{
+    width: 100%;
+    min-width: 320px;
+}
+.Bloque_SubPrincipal_2 .DivConlaTabla th{
+
+    box-shadow: 0px 2px rgba(43, 43, 43, 0.379);
+}
+.Bloque_SubPrincipal_2 .DivConlaTabla td{
+
+    text-align: center;
+    padding: 7px 0px;
+}
+.Bloque_SubPrincipal_2 .Div_DeLa_SubTabla tr:hover{
+    background-color: rgba(0, 0, 0, 0.045);
+    box-shadow: 0px 2px rgba(150, 0, 0, 0.778);
+
+}
+.Bloque_SubPrincipal_2 .DivConlaTabla .DivConTexto{
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+.Bloque_SubPrincipal_2 .DivConlaTabla .DivConTexto p{
+    
+
+    padding-right: 40px;
+}
+
+
+/*Bloque_SubPrincipal_3*/
+
+.divContenedorDatosExtraidos{
+    background-color: white;
+    height: 100%;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.Bloque_SubPrincipal_3_div_ContenedorIcono{
+
+
+}
+.Bloque_SubPrincipal_3_div_ContenedorIcono svg{
+    margin: 10px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 20px;
+    min-height: 20px;
+
+}

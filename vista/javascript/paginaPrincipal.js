@@ -1,0 +1,6 @@
+
+function cerrarVentanaLateral(){
+}
+
+function ocultarElementos(){
+}
