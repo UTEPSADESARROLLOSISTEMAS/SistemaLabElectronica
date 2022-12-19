@@ -1,0 +1,128 @@
+.Bloque_Sub_Principal .Seccion_1{
+    width: 70%;
+    min-width: 320px;
+}
+
+.Bloque_Sub_Principal .Seccion_2{
+    width: 29%;
+    min-width: 320px;
+}
+
+.Bloque_Sub_Principal .Seccion_1 .Botones{
+    padding: 5px 10px;
+    min-width: 120px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.Bloque_Sub_Principal .Seccion_1 .Botones svg{
+    width: 30px;
+    height: 30px;
+    min-width: 15px;
+    min-height: 15px;
+}
+.Bloque_Sub_Principal .Seccion_1 .Botones:hover{
+    fill: white;
+    color: white;
+    background-color: #CF152D;
+
+}
+
+.Bloque_Sub_Principal .Seccion_1 .Botones p{
+    padding-left: 10px;
+
+}
+
+
+.Bloque_Sub_Principal .Seccion_2 .Boton{
+    display: flex;
+    justify-content: end;
+
+}
+
+.Bloque_Sub_Principal .Seccion_2 .Boton svg{
+    width: 30px;
+    height: 30px;
+    min-width: 15px;
+    min-height: 15px;
+}
+.Bloque_Sub_Principal .Seccion_2 .Boton .contenido{
+    
+    width: fit-content;
+    padding: 10px 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    cursor: pointer;
+
+}
+.Bloque_Sub_Principal .Seccion_2 .Boton .contenido:hover{
+
+    fill: white;
+    color: white;
+    background-color: #CF152D;
+}
+
+.Bloque_Sub_Principal .Seccion_2 .Boton .contenido p{
+
+    padding: 10px;
+    
+
+}
+
+
+/*BLOQUE SUBPRINCIPAL 2*/
+
+.Bloque_SubPrincipal_2{
+    padding-top: 10px;
+}
+
+.ContenedorDeLasTabla{
+    width: 100%;
+    min-width: 320px;
+}
+.DivConlaTabla{
+    background-color: white;
+    border-radius: 20px;
+    overflow: auto;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
+}
+.DivConlaTabla table{
+    width: 100%;
+    min-width: 320px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.DivConlaTabla p{
+    padding: 15px;
+}
+
+.DivConlaTabla td{
+    padding: 10px 0px;
+
+    
+}
+.DivConlaTabla td svg{
+    width: 30px;
+    height: 30px;
+    fill: #4462FF;
+    cursor: pointer;
+
+    
+}
+.Div_DeLa_SubTabla tr:hover{
+
+    
+    background-color: rgba(0, 0, 0, 0.045);
+    box-shadow: 0px 2px rgba(150, 0, 0, 0.778);
+
+}
+.DivConlaTabla th{
+
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.221);
+    padding: 10px 0px;
+}

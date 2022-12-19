@@ -93,6 +93,9 @@ body{
     width: 49.5%;
 }
 
+.Columna_30{
+    width: 30%;
+}
 .Columna_25{
     width: 25%;
 }
@@ -103,9 +106,11 @@ body{
 .Columna_15{
     width: 15%;
 }
-
 .Columna_10{
     width: 10%;
+}
+.Columna_5{
+    width: 5%;
 }
 
 
