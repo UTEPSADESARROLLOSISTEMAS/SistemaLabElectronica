@@ -5,8 +5,7 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-color: #CCC3C3;
-
+    background-color: #D9D9D9;
 }
 
 /* Estilos Generales */
@@ -118,8 +117,17 @@ body{
 .Elemento_al_75Porciento{
     width: 75%;
 }
+.Elemento_al_70Porciento{
+    width: 70%;
+}
 .Elemento_al_50Porciento{
-    width: 50%;
+    width: 49.5%;
+}
+.Elemento_al_30Porciento{
+    width: 30%;
+}
+.Elemento_al_25Porciento{
+    width: 25%;
 }
 .Elemento_al_20Porciento{
     width: 20%;
@@ -127,4 +135,8 @@ body{
 
 .Elemento_al_15Porciento{
     width: 15%;
+}
+
+.OcultarElemento{
+    display: none;
 }
