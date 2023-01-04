@@ -85,41 +85,133 @@
 
 }
 /*Estilos del Bloque Sub Principal 3*/
-
-.Bloque_Sub_Principal_3{
-    
-    height: 450px;
-    width: 100%;
-    min-width: 320px;
-}
 .Bloque_Sub_Principal_3 .Cont_Seccion{
-
-
     min-width: 320px;
+    height: 400px;
     background-color: white;
-    margin: 0px 30px;
+    margin: 0px 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 5px 5px;
     display: flex;
-    justify-content: center;
-
 }
-.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion{
-    min-width: 320px;
-    margin: 15px 5px;
+
+.Bloque_Sub_Principal_3 .Cont_Seccion .Secciones{
     width: 50%;
 }
 .Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_1{
-    
-    background-color: white;
-    height: 100%;
     display: flex;
-    padding: 190px 0px;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
-}
-.Bloque_Sub_Principal_3 .Seccion_1 div{
     text-align: center;
 }
+
 .Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2{
-    border: 1px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido{
+
+
+}
+
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos{
+    display: flex;
+    margin: 10px 0px;
+}
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos .CantidadGrafica{
+    max-width: 400px;
+    min-width: 300px;
+    margin: 0px 5px;
+    border-radius: 20px;
+
+}
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos .CantidadGrafica{
+    max-width: 400px;
+    min-width: 300px;
+    margin: 0px 5px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos .CantidadGrafica .Dato{
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+
+
+}
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos .CantidadGrafica .Cantidad_Base{
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.142);
+
+}
+.Bloque_Sub_Principal_3 .Cont_Seccion .Seccion_2 .Contenido .Datos .CantidadGrafica .Cantidad_Extraida{
+    width: 50%;
+    z-index: 3;
+    background-color: #273238;
+}
+
+/*--------------------Bloque Sub Principal 4-----------------------------*/
+.Bloque_Sub_Principal_4{
+    margin-bottom: 50px;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion{
+    justify-content: center;
+    align-self: center;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas{
+    min-width: 290px;
+    width: 100%;
+    max-width: 23%;
+    display: inline-block;
+    padding: 0px 10px;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato{
+    background-color: white;
+    border-radius: 20px;
+    margin: 25px 0px;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos{
+}
+
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_1{
+    padding: 20px;
+    text-align: center;
+}
+
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_2{
+    padding: 15px;
+    text-align: center;
+}
+
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_3{
+    padding: 10px;
+    display: flex;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #273238;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_3 .Seccion_1{
+    width: 33%;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_3 .Seccion_2{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bloque_Sub_Principal_4 .Cont_Seccion .Columnas .CardViewDato .Datos_3 .Seccion_3{
+    width: 33%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
 }
