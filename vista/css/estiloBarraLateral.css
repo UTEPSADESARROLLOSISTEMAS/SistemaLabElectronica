@@ -1,9 +1,14 @@
+@font-face{
+    font-family: "Ubuntu";
+    src: url('../Fuentes/Ubuntu/Ubuntu-Medium.ttf') format('truetype');}
+
+@font-face{
+    font-family: "Open_Sans";
+    src: url('../Fuentes/Open_Sans/static/OpenSans/OpenSans-Medium.ttf') format('truetype');}
+
 /*---------------Menu lateral-------------*/
-
 #boton_desplegarMenu{
-
     display: none;
-  
 }
 #boton_desplegarMenu:checked ~ .BloqueLateral{
     opacity: 1;
@@ -23,7 +28,6 @@
     opacity: 0;
     visibility: hidden;
 }
-
 .BloqueLateral label{
     position: absolute;
     right: 5px;
@@ -43,16 +47,13 @@
     transition: all 500ms ease;
     transform: translateX(-100%);
 }
-.BloqueLateral-Contenedor hr{
-    margin: 0px 10%;
-}
 .BloqueLateral-Contenedor .Navegador{
     width: 100%;
 }
 .BloqueLateral-Contenedor .Navegador .Perfil{
     padding-top: 30px;
-
 }
+
 .BloqueLateral-Contenedor .Navegador .Perfil svg{
     
     max-width: 50px;
@@ -61,12 +62,31 @@
     height: 40px;
     min-width: 10px;
     min-height: 10px;
+    fill: #cf152d;
 
 }
 .BloqueLateral-Contenedor .Navegador .Perfil .Contenedor div{
     padding: 0px 10px;
     display: inline-block;
 
+}
+
+.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor hr{
+    height: 0.5px;
+    background-color: #00000043;
+    border-radius: 20px;
+}
+.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor .TextoDeNombre{
+    font-family: Open_Sans;
+    font-size: 12px;
+    color: gray;
+}
+.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor .TextoDeRol{
+    font-family: Ubuntu;
+
+}
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones{
+    font-family: Ubuntu;
 }
 .BloqueLateral-Contenedor .Navegador .ContenedorOpciones svg{
     
@@ -77,11 +97,11 @@
     min-width: 10px;
     min-height: 10px;
     padding: 0px 20px;
-
+    
 }
 .BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion{
     padding: 5px 0px;
-    color: black;
+    color: #cf152d;
     border-radius: 20px;
     fill: #cf152d;
 
@@ -97,12 +117,13 @@
     padding: 0px 20px;
 }
 .BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion div{
-    justify-content: center;
-    display: flex;
-    align-items: center;
     width: 50%;
     cursor: pointer;
-    
+}
+
+.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion .ContenedorDelIcono{
+    display: flex;
+    justify-content: center;
 }
 
 .BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion:hover{
@@ -145,7 +166,6 @@
 .nav-div-ContenedorDeOpciones1_2{
     width: 50%;
     display: flex;
-    align-items: center;
 }
 
 /*Fin de Menù lateral*/

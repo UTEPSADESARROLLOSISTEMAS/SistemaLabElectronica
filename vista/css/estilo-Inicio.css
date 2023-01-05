@@ -1,41 +1,68 @@
+@font-face{
+    font-family: "Ubuntu";
+    src: url('../Fuentes/Ubuntu/Ubuntu-Medium.ttf') format('truetype');}
+
+@font-face{
+    font-family: "Open_Sans";
+    src: url('../Fuentes/Open_Sans/static/OpenSans/OpenSans-Medium.ttf') format('truetype');}
+
+    
+@font-face{
+    font-family: "Ubuntu_Bold";
+    src: url('../Fuentes/Ubuntu/Ubuntu-Bold.ttf') format('truetype');}
+
+@font-face{
+    font-family: "Open_Sans_Bold";
+    src: url('../Fuentes/Open_Sans/static/OpenSans/OpenSans-Bold.ttf') format('truetype');}
+
 /* Estilos del Bloque SubPrincipal 1*/
 .Bloque_SubPrincipal_1{
     width: 100%;
-    height: 100%;
-
+    display: flex;
 }
-
 .DivDatoExtraido{
-    min-width: 320px;
-    width: 24.5%;
-    margin: 5px 2px;
-    display: inline-block;
+    width: 25%;
+    margin-bottom: 5px;
+    padding: 5px
 }
 .DivDatoExtraido hr{
+
     margin: 0px 30px;
 }
-.Bloque_SubPrincipal_1_div_ContenedorIcono{
+.Bloque_SubPrincipal_1 .DivDatoExtraido .ContenedorIcono{
     position: absolute;
-    border-radius: 20px;
-    margin-left: 30px;
+    border-radius: 10px;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px;
-
-
+    margin-left: 20px;
 }
-.Bloque_SubPrincipal_1_div_ContenedorIcono svg{
+.Bloque_SubPrincipal_1 .DivDatoExtraido .TextResultados{
+    font-family: Ubuntu_Bold;
+    font-size: large;
+}
+.Bloque_SubPrincipal_1 .DivDatoExtraido .TextTitulos{
+    padding: 5px;
+    font-size: small;
+    font-family: Open_Sans;
+    color: #7B7B7B;
+    
+}
+
+.Bloque_SubPrincipal_1 .DivDatoExtraido .TextTitulos_Bold{
+    padding: 5px;
+    font-size: medium;
+    font-family: Open_Sans_Bold;
+    cursor: pointer;
+    color: #7B7B7B;
+}
+.Bloque_SubPrincipal_1 .DivDatoExtraido .ContenedorIcono svg{
     fill: white;
     margin: 10px;
-    max-width: 50px;
-    max-height: 50px;
-    min-width: 20px;
-    min-height: 20px;
-
+    width: 30px;
+    height: 30px;
 }
-
 .divContenedorDatosExtraidos_BloquePrincipal1{
     background-color: white;
     height: 100%;
@@ -43,14 +70,11 @@
     margin-top: 25px;
     padding: 10px;
     border-radius: 20px;
-
-
 }
 .divContenedorDatosExtraidos1_1{
     height: fit-content;
 }
 .divContenedorDatosExtraidos1_1 div{
-
     height: 33%;
 }
 
@@ -125,7 +149,15 @@
 
 
 /*Bloque_SubPrincipal_3*/
+.Bloque_SubPrincipal_3{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+.Bloque_SubPrincipal_3 p{
+    cursor: pointer;
 
+}
 .divContenedorDatosExtraidos{
     background-color: white;
     height: 100%;

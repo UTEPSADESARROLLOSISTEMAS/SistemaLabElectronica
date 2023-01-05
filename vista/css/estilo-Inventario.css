@@ -1,3 +1,6 @@
+.Bloque_Sub_Principal{
+    font-size: small;
+}
 .Bloque_Sub_Principal .Seccion_1{
     width: 70%;
     min-width: 320px;
@@ -73,7 +76,16 @@
 }
 
 /* Bloque SubPrincipal 2*/
+.Bloque_SubPrincipal_2{
+    display: flex;
+    margin: 20px 0px;
+}
 
+.Bloque_SubPrincipal_2 .DivDatoExtraido{
+    width: 25%;
+    font-size: smaller;
+    padding: 0px 5px;
+}
 .divContenedorDatosExtraidos{
     background-color: white;
     height: 100%;
@@ -91,12 +103,6 @@
 
 }
 
-.DivDatoExtraido{
-    min-width: 320px;
-    width: 24.5%;
-    margin: 5px 2px;
-    display: inline-block;
-}
 .DivDatoExtraido hr{
     margin: 0px 30px;
 }
@@ -142,13 +148,19 @@
 
 /*BLOQUE SUBPRINCIPAL 3*/
 
-
+.Bloque_SubPrincipal_3{
+    margin: 20px 0px;
+}
 .ContenedorDeLasTablas{
     width: 100%;
     min-width: 320px;
     padding-top: 20px;
+    font-size: smaller;
+    padding: 5px;
 }
 .DivConlaTabla{
+    height: 100%;
+    padding: 5px;
     background-color: white;
     border-radius: 20px;
     overflow: auto;
