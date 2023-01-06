@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-size: small;
 }
 body{
     padding: 0px;
@@ -167,6 +168,9 @@ body{
 
 .OcultarElemento{
     display: none;
+}
+.txtGrande{
+    font-size: large;
 }
 .txt_ExtraGrande{
     font-size: x-large;
