@@ -32,6 +32,11 @@ body{
 @font-face{
     font-family: "Montserrat_SemiBold";
     src: url('../Fuentes/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');}
+
+    
+@font-face{
+    font-family: "Montserrat_Bold";
+    src: url('../Fuentes/Montserrat/static/Montserrat-Bold.ttf') format('truetype');}
     
 /* Estilos Generales */
 
@@ -194,4 +199,8 @@ body{
 }
 .TextOpen_Sans_Bold{
     font-family: Open_Sans_Bold;
+}
+
+.Text_Montserrat_Bold{
+    font-family: Montserrat_Bold;
 }
