@@ -1,5 +1,6 @@
 .Bloque_Sub_Principal{
     font-size: small;
+    margin-top: 20px;
 }
 .Bloque_Sub_Principal .Seccion_1{
     width: 70%;
@@ -51,7 +52,7 @@
 .Bloque_Sub_Principal .Seccion_2 .Boton .contenido{
     
     width: fit-content;
-    padding: 10px 5px;
+    padding: 5px 10px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -103,9 +104,6 @@
 
 }
 
-.DivDatoExtraido hr{
-    margin: 0px 30px;
-}
 .Bloque_SubPrincipal_1_div_ContenedorIcono{
     position: absolute;
     border-radius: 20px;
@@ -120,7 +118,6 @@
 }
 .Bloque_SubPrincipal_1_div_ContenedorIcono svg{
     fill: white;
-    margin: 10px;
     max-width: 50px;
     max-height: 50px;
     min-width: 20px;
@@ -150,11 +147,11 @@
 
 .Bloque_SubPrincipal_3{
     margin: 20px 0px;
+    display: flex;
 }
 .ContenedorDeLasTablas{
-    width: 100%;
+    width: 50%;
     min-width: 320px;
-    padding-top: 20px;
     font-size: smaller;
     padding: 5px;
 }

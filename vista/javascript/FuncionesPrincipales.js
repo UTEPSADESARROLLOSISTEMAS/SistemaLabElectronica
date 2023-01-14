@@ -21,25 +21,25 @@ btn_OpcionSalir.onclick = CerrarSesion;
 
 /*Funciones que redirigen a sus respectivos Links de la pagina*/ 
 function Redirigir_a_la_Ventana_Tablero() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-paginaPrincipal.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-paginaPrincipal.html";
 }
 function Redirigir_a_la_Ventana_Inventario() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-inventario.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-inventario.html";
 }
 function Redirigir_a_la_Ventana_UsodeLaboratorio() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-usoLaboratorio.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-usoLaboratorio.html";
 }
 function Redirigir_a_la_Ventana_Prestamos() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-Prestamos.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-Prestamos.html";
 }
 function Redirigir_a_la_Ventana_Documentacion() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-Documentacion.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-Documentacion.html";
 }
 function Redirigir_a_la_Ventana_Reportes() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-Reportes.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-Reportes.html";
 }
 function Redirigir_a_la_Ventana_Configuracion() {
-    window.location.href = "http://127.0.0.1:5500/vista/html/Ventana-Configuracion.html";
+    window.location.href = "http://10.2.10.5:5500/vista/html/Ventana-Configuracion.html";
 }
 function CerrarSesion() {
     alert("Cerrar Sesión");

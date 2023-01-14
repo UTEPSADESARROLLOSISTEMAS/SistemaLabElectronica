@@ -39,21 +39,21 @@
     margin-left: 20px;
 }
 .Bloque_SubPrincipal_1 .DivDatoExtraido .TextResultados{
-    font-family: Ubuntu_Bold;
+    font-family: Montserrat_SemiBold;
     font-size: large;
+    margin: 10px;
 }
 .Bloque_SubPrincipal_1 .DivDatoExtraido .TextTitulos{
     padding: 5px;
     font-size: small;
-    font-family: Open_Sans;
-    color: #7B7B7B;
-    
+    font-family: Montserrat_SemiBold;
+    color: black;
 }
 
 .Bloque_SubPrincipal_1 .DivDatoExtraido .TextTitulos_Bold{
     padding: 5px;
-    font-size: medium;
-    font-family: Open_Sans_Bold;
+    font-size: small;
+    font-family: Open_Sans;
     cursor: pointer;
     color: #7B7B7B;
 }
@@ -77,8 +77,126 @@
 .divContenedorDatosExtraidos1_1 div{
     height: 33%;
 }
+/* Estilos del Bloque SubPrincipal_1_2*/
+
+.Bloque_SubPrincipal_1_2{
+
+    margin: 20px 5px;
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido{
+    display: flex;
+}
+
+.Bloque_SubPrincipal_1_2 .Tabla{
+    
+    min-width: 320px;
+    width: 50%;
+}
+.Bloque_SubPrincipal_1_2 .DivConlaTabla{
+
+    background-color: white;
+    border-radius: 20px;
+    overflow: auto;
+    
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
+
+}
+.Bloque_SubPrincipal_1_2 .TablaMadre{
+    width: 100%;
+    min-width: 320px;
+}
+.Bloque_SubPrincipal_1_2 .TablaMadre_SubTabla_1{
+
+    min-width: 320px;
+    width: 100%;
+}
+.Bloque_SubPrincipal_1_2 .TablaMadre_SubTabla_1 tr{
+    color:black;
+    justify-content: center;
+    
+}
+.Bloque_SubPrincipal_1_2 .Div_DeLa_SubTabla{
+    width:100%;
+    min-width: 320px; 
+    height:200px; 
+    overflow:auto;
+    text-align: center;
+}
+.Bloque_SubPrincipal_1_2 .SubTabla{
+    width: 100%;
+    min-width: 320px;
+}
+.Bloque_SubPrincipal_1_2 .DivConlaTabla th{
+
+    box-shadow: 0px 2px rgba(43, 43, 43, 0.379);
+}
+.Bloque_SubPrincipal_1_2 .DivConlaTabla td{
+
+    text-align: center;
+    padding: 7px 0px;
+}
+.Bloque_SubPrincipal_1_2 .Div_DeLa_SubTabla tr:hover{
+    background-color: rgba(0, 0, 0, 0.045);
+    box-shadow: 0px 2px rgba(150, 0, 0, 0.778);
+
+}
+.Bloque_SubPrincipal_1_2 .DivConlaTabla .DivConTexto{
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+.Bloque_SubPrincipal_1_2 .DivConlaTabla .DivConTexto p{
+    
+
+    padding-right: 40px;
+}
 
 
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas{
+    width: 50%;
+    margin: 0px 5px;
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas .Cardview{
+    background-color: white;
+    padding: 30px;
+    margin: 5px 0px;
+    border-radius: 15px;
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas .Cardview .Txt_Titulo{
+    font-family: Open_Sans;
+
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas .Cardview .Seccion{
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas .Cardview .Seccion p{
+
+    font-family: Open_Sans_SemiBold;
+    font-size: xx-large;
+
+}
+.Bloque_SubPrincipal_1_2 .Contenido .DatosExtraidos .Columnas .Cardview .Seccion svg{
+
+    position: absolute;
+    right: 0;
+    width: 40px; 
+    height: 40px;
+
+}
 /* Estilos del Bloque SubPrincipal 2*/
 
 .Bloque_SubPrincipal_2{
@@ -86,6 +204,7 @@
 
     min-width: 320px;
     width: 100%;
+    margin-bottom: 50px;
 }
 .Bloque_SubPrincipal_2 .DivConlaTabla{
 
@@ -145,36 +264,4 @@
     
 
     padding-right: 40px;
-}
-
-
-/*Bloque_SubPrincipal_3*/
-.Bloque_SubPrincipal_3{
-    width: 100%;
-    display: flex;
-    margin-bottom: 30px;
-}
-.Bloque_SubPrincipal_3 p{
-    cursor: pointer;
-
-}
-.divContenedorDatosExtraidos{
-    background-color: white;
-    height: 100%;
-    box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.Bloque_SubPrincipal_3_div_ContenedorIcono{
-
-
-}
-.Bloque_SubPrincipal_3_div_ContenedorIcono svg{
-    margin: 10px;
-    max-width: 50px;
-    max-height: 50px;
-    min-width: 20px;
-    min-height: 20px;
-
 }
