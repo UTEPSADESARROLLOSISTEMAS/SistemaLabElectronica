@@ -1,6 +1,25 @@
+
+
+.Ventana_AgregarActivo{
+    z-index: 100;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+}
+
 .Bloque_Sub_Principal{
     font-size: small;
     margin-top: 20px;
+    z-index: 2;
+}
+.show{
+    display: "flex";
+    opacity: 1;
 }
 .Bloque_Sub_Principal .Seccion_1{
     width: 70%;
@@ -16,7 +35,17 @@
     min-width: 120px;
     background-color: white;
     border-radius: 20px;
+}
+
+.Bloque_Sub_Principal .Seccion_1 .Botones label{
     cursor: pointer;
+
+}
+
+
+.Bloque_Sub_Principal .Seccion_1 .Botones input[type='checkbox']{
+    display: none;
+
 }
 .Bloque_Sub_Principal .Seccion_1 .Botones svg{
     width: 30px;
@@ -48,6 +77,9 @@
     height: 30px;
     min-width: 15px;
     min-height: 15px;
+}
+.Bloque_Sub_Principal .Seccion_2 .Boton label{
+    cursor: pointer;
 }
 .Bloque_Sub_Principal .Seccion_2 .Boton .contenido{
     
@@ -190,4 +222,89 @@
 
     box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
     padding: 10px 0px;
+}
+
+
+/*Ejecucion de los labels*/
+
+
+
+.Ventana_AgregarActivo *{
+
+    transition: all 300ms ease;
+}
+.Ventana_AgregarActivo .Sub_Ventana{
+    margin: auto;
+    height: 70%;
+    width: 90%;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido p{
+    font-family: Montserrat;
+    font-size: medium;
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido{
+
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido > div{
+    margin: 15px 10px;
+}
+
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido textarea{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido input{
+
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 5px;
+
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido select{
+    
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 5px;
+    
+    font-family: Open_Sans;
+}
+.Ventana_AgregarActivo .Sub_Ventana .Contenido .Seccion_7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Ventana_AgregarActivo .Sub_Ventana .Contenido .Seccion_7 button{
+
+    padding: 15px 100px;
+    margin: 0px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido .Seccion_7 .Btn_1:hover{
+    background-color: #D61F31;
+    color: white;
+}
+
+.Ventana_AgregarActivo .Sub_Ventana .Contenido .Seccion_7 .Btn_2:hover{
+    background-color: #13A53C;
+    color: white;
 }

@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
+    
     <link rel="stylesheet" href="../css/estilo-Inventario.css">
     <link rel="stylesheet" href="../css/estiloGenerales.css">
     <link rel="stylesheet" href="../css/estiloBarraLateral.css">
     <link rel="stylesheet" href="../css/estiloBarraSuperior.css">
+    <link rel="stylesheet" href="../css/estilo-AgregarActivo.css">
+
 </head>
 
 <header class="header_BarraDeNavegacionDeArriba">
@@ -177,9 +180,79 @@
 </div>
     
 <body>
+    
 
+    <div class="Ventana_AgregarActivo" id="Ventana_AgregarActivo">
+        <div class="Sub_Ventana">
+            <div class="Contenido">
+                <div  class="Seccion_1">
+                    <select class="Selectores" name="" id="">
+                        <option value="Nulo" selected>Seleccione una Categoria</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                    <select class="Selectores" name="" id="">
+                        <option value="Nulo" selected>Seleccione un Grupo de Activo</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                </div>
+                <div class="Seccion_2">
+                    <p>Nombre Del Activo:</p>
+                    <input type="text">
+                </div>
+                <div class="Seccion_3">
+                    <p>Codigo de Activo:</p>
+                    <input type="text">
+                </div>
+    
+                <div class="Seccion_3_2">
+                    <p>Cantidad:</p>
+                    <input type="text">
+                </div>
+                <div class="Seccion_4"style="display: flex;" >
+                    <div >
+                        <select class="Selectores" name="" id="">
+                            <option value="Nulo" selected>¿Requiere Mantenimiento?</option>
+                            <option value="">Si</option>
+                            <option value="">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="Selectores" name="" id="">
+                            <option value="Nulo" selected>Tipo de Mantenimiento</option>
+                            <option value="Preventivo">Preventivo</option>
+                            <option value="Correctivo">Correctivo</option>
+                            <option value="Actualizacion">Actualizacion</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="Seccion_5">
+                    <div>
+                        <p>Fecha del Proximo Mantenimiento:</p>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="Seccion_6">
+                    
+                    <p>Observaciones: </p>
+                    <textarea  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="Seccion_7">
+                    
+                    <button id="btnCerrarVentana" class="Btn_1">Cancelar</button>
+                    <button class="Btn_2">Agregar</button>
+    
+                </div>
+                
+            </div>
+    
+        </div>
+    </div>
    
     <div class="Bloque_principal">
+        
 
         <div class="Bloque_Sub_Principal Text_Montserrat_SemiBold">
             <div class="Seccion_1 DivConDisplayInlineBlock">
@@ -193,9 +266,11 @@
                             </g>
                             </svg>
                             
-                        <p class="">
+                        <label id="MostrarActivo" class="prueba" for="btn_AgregarActivo">
                             Agregar Activo
-                        </p>
+                        </label>
+                        <input type="checkbox" id="btn_AgregarActivo">
+
                     </div>
                    
                 </div>
@@ -208,9 +283,11 @@
                             </g>
                             </svg>
                             
-                        <p class="">
+                            
+                        <label for="btn_AgregarCategoria">
                             Agregar Categoria
-                        </p>
+                        </label>
+                        <input type="checkbox" id="btn_AgregarCategoria">
                     </div>
                    
                 </div>
@@ -223,9 +300,11 @@
                             </g>
                             </svg>
                             
-                        <p class="">
+                        <label for="btn_AgregarGrupoDeActivos">
                             Agregar Grupo de Activos
-                        </p>
+                        </label>
+                        <input type="checkbox" id="btn_AgregarGrupoDeActivos">
+
                     </div>
                    
                 </div>
@@ -238,7 +317,9 @@
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 19.898438 20.976562 L 13.324219 14.398438 C 12.824219 14.832031 12.242188 15.171875 11.574219 15.414062 C 10.910156 15.652344 10.199219 15.773438 9.449219 15.773438 C 7.648438 15.773438 6.125 15.148438 4.875 13.898438 C 3.625 12.648438 3 11.140625 3 9.375 C 3 7.609375 3.625 6.101562 4.875 4.851562 C 6.125 3.601562 7.640625 2.976562 9.425781 2.976562 C 11.191406 2.976562 12.695312 3.601562 13.9375 4.851562 C 15.179688 6.101562 15.800781 7.609375 15.800781 9.375 C 15.800781 10.089844 15.683594 10.785156 15.449219 11.449219 C 15.214844 12.117188 14.867188 12.742188 14.398438 13.324219 L 21 19.875 Z M 9.425781 14.273438 C 10.773438 14.273438 11.925781 13.796875 12.875 12.835938 C 13.824219 11.878906 14.300781 10.726562 14.300781 9.375 C 14.300781 8.023438 13.824219 6.871094 12.875 5.914062 C 11.925781 4.953125 10.773438 4.476562 9.425781 4.476562 C 8.058594 4.476562 6.894531 4.953125 5.9375 5.914062 C 4.980469 6.871094 4.5 8.023438 4.5 9.375 C 4.5 10.726562 4.980469 11.878906 5.9375 12.835938 C 6.894531 13.796875 8.058594 14.273438 9.425781 14.273438 Z M 9.425781 14.273438 "/>
                             </g>
                             </svg>
-                        <p>Buscar</p>
+                            <label for="btn_BuscarActivo">Buscar</label>
+                            <input type="checkbox" id="btn_BuscarActivo">
+
                     </div>
                 </div>
             </div>
@@ -509,7 +590,7 @@
 
         </div>
     </div>
-
+       
     
 </body>
 
