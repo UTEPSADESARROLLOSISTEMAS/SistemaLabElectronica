@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="../css/estiloGenerales.css">
     <link rel="stylesheet" href="../css/estiloBarraLateral.css">
     <link rel="stylesheet" href="../css/estiloBarraSuperior.css">
-    <link rel="stylesheet" href="../css/estilo-AgregarActivo.css">
+    <link rel="stylesheet" href="../css/estilo-Vna_AgregarActivo.css">
+    <link rel="stylesheet" href="../css/estilo-Vna_AgregarCategoria.css">
+    <link rel="stylesheet" href="../css/estilo-Vna_AgregarGrupoDeActivos.css">
+    <link rel="stylesheet" href="../css/estilo-Vna_BuscarEnInventario.css">
 
 </head>
 
@@ -183,8 +186,8 @@
     
 
     <div class="Ventana_AgregarActivo" id="Ventana_AgregarActivo">
-        <div class="Sub_Ventana">
-            <div class="Contenido">
+        <div class="Sub_Ventana" id="Sub_VentanaEmergente">
+            <form action="" class="Contenido">
                 <div  class="Seccion_1">
                     <select class="Selectores" name="" id="">
                         <option value="Nulo" selected>Seleccione una Categoria</option>
@@ -241,15 +244,118 @@
                 </div>
                 <div class="Seccion_7">
                     
-                    <button id="btnCerrarVentana" class="Btn_1">Cancelar</button>
+                    <button id="btn_CerrarVentana" class="Btn_1">Cancelar</button>
                     <button class="Btn_2">Agregar</button>
     
                 </div>
                 
-            </div>
+            </form>
     
+            
         </div>
     </div>
+
+    <div class="Ventana_AgregarCategoria" id="Ventana_AgregarCategoria">
+        <div class="Sub_Ventana">
+            <form action="" class="Contenido">
+                
+                <div class="Seccion_2">
+                    <p>Nombre De la Categoria:</p>
+                    <input type="text">
+                </div>
+            
+                <div class="Seccion_6">
+                    
+                    <p>Observaciones: </p>
+                    <textarea  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="Seccion_7">
+                    
+                    <button id="btn_CerrarVentana" class="Btn_1">Cancelar</button>
+                    <button class="Btn_2">Agregar</button>
+
+                </div>
+                
+            </form>
+
+            
+        </div>
+    </div>
+
+    <div class="Ventana_AgregarGrupoDeActivos" id="Ventana_AgregarGrupoDeActivos">
+        <div class="Sub_Ventana">
+            <form action="" class="Contenido">
+                <div  class="Seccion_1">
+                    <select class="Selectores" name="" id="">
+                        <option value="Nulo" selected>Seleccione una Categoria</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                </div>
+                <div class="Seccion_2">
+                    <p>Nombre Del Grupo De Activo:</p>
+                    <input type="text">
+                </div>
+                <div class="Seccion_3">
+                    <p>Unidad de Medida:</p>
+                    <input type="text">
+                </div>
+
+                <div class="Seccion_6">
+                    
+                    <p>Observaciones: </p>
+                    <textarea  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="Seccion_7">
+                    
+                    <button id="btn_CerrarVentana" class="Btn_1">Cancelar</button>
+                    <button class="Btn_2">Agregar</button>
+
+                </div>
+                
+            </form>
+
+            
+        </div>
+    </div>
+
+    <div class="Ventana_BuscarActivo" id="Ventana_BuscarActivo">
+        <div class="Sub_Ventana">
+            <form action="" class="Contenido">
+                <div  class="Seccion_1">
+                    <select class="Selectores" name="" id="">
+                        <option value="Nulo" selected>Seleccione una Categoria</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                    <select class="Selectores" name="" id="">
+                        <option value="Nulo" selected>Seleccione un Grupo de Activo</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                </div>
+                <div class="Seccion_2">
+                    <p>Nombre Del Activo:</p>
+                    <input type="text">
+                </div>
+                <div class="Seccion_3">
+                    <p>Codigo de Activo:</p>
+                    <input type="text">
+                </div>
+
+                <div class="Seccion_7">
+                    
+                    <button id="btn_CerrarVentana" class="Btn_1">Cancelar</button>
+                    <button class="Btn_2">Agregar</button>
+
+                </div>
+                
+            </form>
+
+            
+        </div>
+    </div>
+
    
     <div class="Bloque_principal">
         
@@ -257,7 +363,7 @@
         <div class="Bloque_Sub_Principal Text_Montserrat_SemiBold">
             <div class="Seccion_1 DivConDisplayInlineBlock">
                 
-                <div class="Botones DivConDisplayInlineBlock ">
+                <div  id="btn_AgregarActivo" class="Botones DivConDisplayInlineBlock ">
                    
                     <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
@@ -266,17 +372,16 @@
                             </g>
                             </svg>
                             
-                        <label id="MostrarActivo" class="prueba" for="btn_AgregarActivo">
+                        <label   for="btn_AgregarActivo">
                             Agregar Activo
                         </label>
-                        <input type="checkbox" id="btn_AgregarActivo">
 
                     </div>
                    
                 </div>
-                <div class="Botones DivConDisplayInlineBlock ">
+                <div id="btn_AgregarCategoria" class="Botones DivConDisplayInlineBlock ">
                    
-                    <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
+                    <div   class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 11.25 19 L 11.25 12.75 L 5 12.75 L 5 11.25 L 11.25 11.25 L 11.25 5 L 12.75 5 L 12.75 11.25 L 19 11.25 L 19 12.75 L 12.75 12.75 L 12.75 19 Z M 11.25 19 "/>
@@ -287,11 +392,10 @@
                         <label for="btn_AgregarCategoria">
                             Agregar Categoria
                         </label>
-                        <input type="checkbox" id="btn_AgregarCategoria">
                     </div>
                    
                 </div>
-                <div class="Botones DivConDisplayInlineBlock ">
+                <div  id="btn_AgregarGrupoDeActivos" class="Botones DivConDisplayInlineBlock ">
                    
                     <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
@@ -303,14 +407,13 @@
                         <label for="btn_AgregarGrupoDeActivos">
                             Agregar Grupo de Activos
                         </label>
-                        <input type="checkbox" id="btn_AgregarGrupoDeActivos">
 
                     </div>
                    
                 </div>
             </div>
             <div class="Seccion_2 DivConDisplayInlineBlock">
-                <div class="Boton">
+                <div  id="btn_AgregarBuscarActivo" class="Boton">
                     <div class="contenido">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
@@ -318,7 +421,6 @@
                             </g>
                             </svg>
                             <label for="btn_BuscarActivo">Buscar</label>
-                            <input type="checkbox" id="btn_BuscarActivo">
 
                     </div>
                 </div>
@@ -595,6 +697,7 @@
 </body>
 
 
-<script type="text/javascript"
-src="../javascript/FuncionesPrincipales.js"></script>
+<script type="text/javascript" src="../javascript/FuncionesPrincipales.js"></script>
+<script type="text/javascript" src="../javascript/funciones_Inventario.js"></script>
+
 </html>

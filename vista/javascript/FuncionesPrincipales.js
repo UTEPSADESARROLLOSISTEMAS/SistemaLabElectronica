@@ -8,10 +8,6 @@ let btn_OpcionReportes = document.getElementById("BtnOpcion_Reportes");
 let btn_OpcionConfiguracion = document.getElementById("BtnOpcion_Configuracion");
 let btn_OpcionSalir = document.getElementById("BtnOpcion_Salir");
 
-let btn_Mostrar = document.getElementById("MostrarActivo");
-let formulario = document.getElementById("Ventana_AgregarActivo");
-let btn_cerrar = document.getElementById("btnCerrarVentana");
-
 /* Se enlaza con su funcion, para  redirigir a su ventana correspondiente*/
 btn_OpcionTablero.onclick = Redirigir_a_la_Ventana_Tablero;
 btn_OpcionInventario.onclick = Redirigir_a_la_Ventana_Inventario;
@@ -21,10 +17,6 @@ btn_OpcionDocumentacion.onclick = Redirigir_a_la_Ventana_Documentacion;
 btn_OpcionReportes.onclick = Redirigir_a_la_Ventana_Reportes;
 btn_OpcionConfiguracion.onclick = Redirigir_a_la_Ventana_Configuracion;
 btn_OpcionSalir.onclick = CerrarSesion;
-
-btn_Mostrar.onclick = MostrarVentanaAgregarActivo;
-btn_cerrar.onclick = CerrarVentana;
-
 
 
 /*Funciones que redirigen a sus respectivos Links de la pagina*/ 
@@ -53,11 +45,3 @@ function CerrarSesion() {
     alert("Cerrar Sesión");
 }
 
-function MostrarVentanaAgregarActivo(){
-    formulario.style.display = "flex";
-}
-function CerrarVentana(){
-    formulario.style.display = "none";
-}
-
-/*Arreglar los nombres de las variables  de los botones que cierran ventanas*/ 
