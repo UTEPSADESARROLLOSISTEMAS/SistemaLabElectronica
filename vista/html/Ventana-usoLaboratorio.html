@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/estiloGenerales.css">
     <link rel="stylesheet" href="../css/estiloBarraLateral.css">
     <link rel="stylesheet" href="../css/estiloBarraSuperior.css">
+    <link rel="stylesheet" href="../css/estilo_Vna_AgregarLaboratorio.css">
+    <link rel="stylesheet" href="../css/estilo_Vna_AgregarSoporte.css">
+
 </head>
 
 <header class="header_BarraDeNavegacionDeArriba">
@@ -178,7 +181,195 @@
     
 <body>
 
-   
+
+    <div class="Ventana_AgregarReserva" id="Ventana_AgregarReserva">
+        <div class="Sub_Ventana" id="Sub_VentanaEmergente">
+            <form action="" class="Contenido">
+               
+                <div>
+                    <p>Introduzca el nombre del Docente/Encargado:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div>
+                    <p>Materia o Titulo de Laboratorio:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="Seccion">
+                    
+                    
+                    <div>
+                        <p>Aula:</p>
+                        <select name="" id="">
+                            <option value="Ninguna" selected>Seleccione un Aula</option>
+                            <option value="N-200">N-200</option>
+                            <option value="N-201">N-201</option>
+                            <option value="N-202">N-202</option>
+                            <option value="N-210">N-210</option>
+                            <option value="N-211">N-211</option>
+                            <option value="N-220">N-220</option>
+                            <option value="N-221">N-221</option>
+                            <option value="N-222">N-222</option>
+                            <option value="N-300">N-300</option>
+                            <option value="N-301">N-301</option>
+                            <option value="N-400">N-400</option>
+                            <option value="N-401">N-401</option>
+                            <option value="N-402">N-402</option>
+                            <option value="N-500">N-500</option>
+                            <option value="N-501">N-501</option>
+                            <option value="N-502">N-502</option>
+                            <option value="N-503">N-503</option>
+        
+                        </select>
+    
+                    </div>
+                    
+                </div>
+                <div class="Seccion">
+                    <div>
+                        <p>Cantidad de Estudiantes:</p>
+                        <input type="number" placeholder="">
+                    </div>
+                </div>
+                <div>
+                    <p>Auxiliar de Laboratorio:</p>
+                    <select name="" id="">
+                        <option value="Ninguna" selected>Seleccione un Auxiliar</option>
+                        <option value="Vacio" >No Requiere Auxiliar de Laboratorio</option>
+                        <option value="Asignar">Solicitar Auxiliar de Laboratorio</option>
+                        </select>
+                </div>
+                
+                <div>
+                    <p>Tipo de Reserva:</p>
+                    <select name="" id="">
+                        <option value="Ninguna" selected>Seleccione un tipo de Reserva</option>
+                        <option value="Modular">Modular</option>
+                        <option value="BiModular">BiModular</option>
+                        <option value="SemiPresencial(Martes-Jueves)">SemiPresencial(Martes-Jueves)</option>
+                        <option value="SemiPresencial(Lunes-Miercoles)">SemiPresencial(Lunes-Miercoles)</option>
+                        <option value="SemiPresencial(Sabados)">SemiPresencial(Sabados)</option>
+                        <option value="Fecha Especifica">Fecha Especifica</option>
+                    </select>
+                </div>
+                <div class="Seccion Seccion_Fechas">
+                    <div>
+                        <p>Fecha Inicio:</p>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <p>Fecha Final:</p>
+                        <input type="date">
+                    </div>
+                </div>
+                <div>
+                        
+                    <p>Observaciones: </p>
+                    <textarea  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div class="div_Botones_cancelarYGuardar">
+    
+                    <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
+                    <button class="btn_Agregar">Agregar</button>
+                    
+                </div>
+    
+                
+    
+                
+            </form>
+    
+            
+        </div>
+    </div>
+    
+      
+
+
+    <div class="Ventana_AgregarSoporte" id="Ventana_AgregarSoporte">
+        <div class="Sub_Ventana" id="Sub_VentanaEmergente">
+            <form action="" class="Contenido">
+
+                <div class="Seccion">
+                    
+                    <div>
+                        <p>Tipo de Soporte:</p>
+                        <select name="" id="">
+                            <option value="Seleccionar" selected>Seleccione un Tipo de Soporte</option>
+                            <option value="Docente" >Docente</option>
+                            <option value="Estudiante" >Estudiante</option>
+                            <option value="Administrativo" >Administrativo</option>
+                            <option value="Otros">Otros</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <p>Medio de Atención:</p>
+                        <select  name="" id="">
+                            <option value="Seleccionar" selected>Seleccione el medio de Atención</option>
+                            <option value="Presencial">Presencial</option>
+                            <option value="Whatsapp">Whatsapp</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Otros Medios">Otros Medios</option>
+
+                        </select>
+
+                    </div>
+                    
+                </div>
+                
+                <div>
+                    <p>Introduzca el Nombre Completo:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="Seccion">
+                    <div>
+                        <p>Nro de Registro:</p>
+                        <input type="text" placeholder="">
+                    </div>
+                </div>
+                <div>
+                    <p>Materia:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div>
+                    <p>Problema:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div>
+                    <p>Solución:</p>
+                    <input type="text" placeholder="">
+                </div>
+                
+                
+                
+                <div class="Seccion Seccion_Fechas">
+                    <div>
+                        <p>Fecha:</p>
+                        <input type="date">
+                    </div>
+                </div>
+                <div>
+                        
+                    <p>Observaciones: </p>
+                    <textarea  name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div class="div_Botones_cancelarYGuardar">
+
+                    <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
+                    <button class="btn_Agregar">Agregar</button>
+                    
+                </div>
+
+                
+
+                
+            </form>
+
+            
+        </div>
+    </div>
     <div class="Bloque_principal">
 
         <div class="Bloque_Sub_Principal">
@@ -186,37 +377,37 @@
                 
                 <div class="Botones DivConDisplayInlineBlock ">
                    
-                    <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
+                    <div id="btn_AgregarReserva" class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 11.25 19 L 11.25 12.75 L 5 12.75 L 5 11.25 L 11.25 11.25 L 11.25 5 L 12.75 5 L 12.75 11.25 L 19 11.25 L 19 12.75 L 12.75 12.75 L 12.75 19 Z M 11.25 19 "/>
                             </g>
                             </svg>
                             
-                        <p class="">
+                        <label  class="">
                             Agregar Solicitud
-                        </p>
+                        </label>
                     </div>
                    
                 </div>
                 <div class="Botones DivConDisplayInlineBlock ">
                    
-                    <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
+                    <div id="btn_AgregarSoporte" class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 11.25 19 L 11.25 12.75 L 5 12.75 L 5 11.25 L 11.25 11.25 L 11.25 5 L 12.75 5 L 12.75 11.25 L 19 11.25 L 19 12.75 L 12.75 12.75 L 12.75 19 Z M 11.25 19 "/>
                             </g>
                             </svg>
                             
-                        <p class="">
+                        <label  class="">
                             Agregar Soporte
-                        </p>
+                        </label>
                     </div>
                    
                 </div>
                
             </div>
-            <div class="Seccion_2 DivConDisplayInlineBlock">
+            <div style="display: none;" class="Seccion_2 DivConDisplayInlineBlock">
                 <div class="Boton">
                     <div class="contenido">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
@@ -224,7 +415,7 @@
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 19.898438 20.976562 L 13.324219 14.398438 C 12.824219 14.832031 12.242188 15.171875 11.574219 15.414062 C 10.910156 15.652344 10.199219 15.773438 9.449219 15.773438 C 7.648438 15.773438 6.125 15.148438 4.875 13.898438 C 3.625 12.648438 3 11.140625 3 9.375 C 3 7.609375 3.625 6.101562 4.875 4.851562 C 6.125 3.601562 7.640625 2.976562 9.425781 2.976562 C 11.191406 2.976562 12.695312 3.601562 13.9375 4.851562 C 15.179688 6.101562 15.800781 7.609375 15.800781 9.375 C 15.800781 10.089844 15.683594 10.785156 15.449219 11.449219 C 15.214844 12.117188 14.867188 12.742188 14.398438 13.324219 L 21 19.875 Z M 9.425781 14.273438 C 10.773438 14.273438 11.925781 13.796875 12.875 12.835938 C 13.824219 11.878906 14.300781 10.726562 14.300781 9.375 C 14.300781 8.023438 13.824219 6.871094 12.875 5.914062 C 11.925781 4.953125 10.773438 4.476562 9.425781 4.476562 C 8.058594 4.476562 6.894531 4.953125 5.9375 5.914062 C 4.980469 6.871094 4.5 8.023438 4.5 9.375 C 4.5 10.726562 4.980469 11.878906 5.9375 12.835938 C 6.894531 13.796875 8.058594 14.273438 9.425781 14.273438 Z M 9.425781 14.273438 "/>
                             </g>
                             </svg>
-                        <p>Buscar</p>
+                        <label id="btn_BuscarReserva">Buscar</label>
                     </div>
                 </div>
             </div>
@@ -436,4 +627,6 @@
 
 <script type="text/javascript"
 src="../javascript/FuncionesPrincipales.js"></script>
+<script type="text/javascript"
+src="../javascript/funciones_usoLaboratorio.js"></script>
 </html>
