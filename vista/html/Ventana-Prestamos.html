@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/estiloGenerales.css">
     <link rel="stylesheet" href="../css/estiloBarraLateral.css">
     <link rel="stylesheet" href="../css/estiloBarraSuperior.css">
+    <link rel="stylesheet" href="../css/estilo_Vna_AgregarPrestamo.css">
+
 </head>
 
 <header class="header_BarraDeNavegacionDeArriba">
@@ -178,28 +180,127 @@
     
 <body>
 
+
+
+    <div class="Ventana_AgregarPrestamo" id="Ventana_AgregarPrestamo">
+        <div class="Sub_Ventana" id="Sub_VentanaEmergente">
+            <form action="" class="Contenido">
+
+                <div class="">
+                    <p>Prestamo destinado a:</p>
+                    <select name="" id="select_DestinoPrestamo">
+                        <option value="Seleccionar" selected>Seleccione el destino</option>
+                        <option value="Docente">Docente</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Administrativo">Administrativo</option>
+                    </select>
+                </div>
+                <div class="ocultar" id="input_NombreDeDocente">
+                    <p>Nombre del Docente:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="ocultar" id="input_NombreDelEstudiante">
+                    <p>Nombre del Estudiante:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="ocultar" id="input_NombreDelEncargado">
+                    <p>Nombre del Encargado:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="ocultar" id="input_areaDelEncargado">
+                    <p>Area:</p>
+                    <input type="text" placeholder="">
+                </div>
+
+                <div class="ocultar" id="input_MateriaDelEstudiante">
+                    <p>Materia:</p>
+                    <input type="text" placeholder="">
+                </div>
+
+                <div class="Seccion ocultar">
+                    <div id="input_NroDeRegistroEstudiante">
+                        <p>Nro de Registro:</p>
+                        <input type="number" placeholder="">
+                    </div>
+                    <div id="input_NroDeCelular">
+                        <p>Nro de Celular:</p>
+                        <input type="number" placeholder="">
+                    </div>
+                </div>
+                <div class="Seccion Seccion_Fechas ocultar" id="inputs_fechasDePrestamo">
+                    <div>
+                        <p>Fecha de Solicitud:</p>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <p>Fecha Estimada de Devolución:</p>
+                        <input type="date">
+                    </div>
+                </div>
+
+
+
+                
+                <div class="Seccion ocultar">
+                    <div id="Selects_ActivoOMaterial">
+                        <p>¿Es Activo o Material?:</p>
+                        <select name="" id="">
+                            <option value="Seleccionar" selected>Seleccione un Tipo</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Material">Material</option>
+
+                        </select>
+                    </div>
+                    <div id="Selects_Categoria">
+                        <p>Categoria:</p>
+                        <select name="" id="">
+                            <option value="Seleccionar" selected>Seleccione una Categoria</option>
+                            <option value="Categoria">Categoria</option>
+                            <option value="Categoria">Categoria</option>
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="ocultar">
+                    <p>Nombre del Activo:</p>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="ocultar">
+
+                    <p>Materiales a Prestar: </p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="ocultar">
+
+                    <p>Observaciones: </p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="div_Botones_cancelarYGuardar">
+
+                    <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
+                    <button class="btn_Agregar ocultar">Agregar</button>
+
+                </div>
+
+
+
+
+            </form>
+
+
+        </div>
+    </div>
+
    
     <div class="Bloque_principal">
 
         <div class="Bloque_Sub_Principal">
             <div class="Seccion_1 DivConDisplayInlineBlock">
                 
-                <div class="Botones DivConDisplayInlineBlock ">
-                   
-                    <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
-                            <g id="surface1">
-                            <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 11.25 19 L 11.25 12.75 L 5 12.75 L 5 11.25 L 11.25 11.25 L 11.25 5 L 12.75 5 L 12.75 11.25 L 19 11.25 L 19 12.75 L 12.75 12.75 L 12.75 19 Z M 11.25 19 "/>
-                            </g>
-                            </svg>
-                            
-                        <p class="">
-                            Agregar Solicitud
-                        </p>
-                    </div>
-                   
-                </div>
-                <div class="Botones DivConDisplayInlineBlock ">
+                
+                <div class="Botones DivConDisplayInlineBlock " id="btn_Ventana_AgregarPrestamo">
                    
                     <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
@@ -424,4 +525,6 @@
 
 <script type="text/javascript"
 src="../javascript/FuncionesPrincipales.js"></script>
+<script type="text/javascript"
+src="../javascript/funciones_prestamos.js"></script>
 </html>

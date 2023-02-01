@@ -1,89 +1,114 @@
-  
-<link rel="stylesheet" href="../css/estilo_Vna_AgregarSoporte.css">
+<link rel="stylesheet" href="../css/estilo_Vna_AgregarPrestamo.css">
 
 
 
-<div class="Ventana_AgregarSoporte" id="Ventana_AgregarSoporte">
+<div class="Ventana_AgregarPrestamo" id="Ventana_AgregarPrestamo">
     <div class="Sub_Ventana" id="Sub_VentanaEmergente">
         <form action="" class="Contenido">
 
-            <div class="Seccion">
-                
-                <div>
-                    <p>Tipo de Soporte:</p>
-                    <select name="" id="">
-                        <option value="Seleccionar" selected>Seleccione un Tipo de Soporte</option>
-                        <option value="Docente" >Docente</option>
-                        <option value="Estudiante" >Estudiante</option>
-                        <option value="Administrativo" >Administrativo</option>
-                        <option value="Otros">Otros</option>
-
-                    </select>
-                </div>
-                <div>
-                    <p>Medio de Atención:</p>
-                    <select  name="" id="">
-                        <option value="Seleccionar" selected>Seleccione el medio de Atención</option>
-                        <option value="Presencial">Presencial</option>
-                        <option value="Whatsapp">Whatsapp</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Otros Medios">Otros Medios</option>
-
-                    </select>
-
-                </div>
-                
+            <div class="">
+                <p>Prestamo destinado a:</p>
+                <select name="" id="">
+                    <option value="Seleccionar" selected>Seleccione el destino</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Administrativo">Administrativo</option>
+                </select>
             </div>
-            
-            <div>
-                <p>Introduzca el Nombre Completo:</p>
+            <div class="ocultar">
+                <p>Nombre del Docente:</p>
                 <input type="text" placeholder="">
             </div>
-            <div class="Seccion">
-                <div>
-                    <p>Nro de Registro:</p>
-                    <input type="text" placeholder="">
-                </div>
+            <div class="ocultar">
+                <p>Nombre del Estudiante:</p>
+                <input type="text" placeholder="">
             </div>
-            <div>
+            <div class="ocultar">
+                <p>Nombre del Encargado:</p>
+                <input type="text" placeholder="">
+            </div>
+            <div class="ocultar">
+                <p>Area:</p>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="ocultar">
                 <p>Materia:</p>
                 <input type="text" placeholder="">
             </div>
-            <div>
-                <p>Problema:</p>
-                <input type="text" placeholder="">
-            </div>
-            <div>
-                <p>Solución:</p>
-                <input type="text" placeholder="">
-            </div>
-            
-            
-            
-            <div class="Seccion Seccion_Fechas">
+
+            <div class="Seccion ocultar">
                 <div>
-                    <p>Fecha:</p>
+                    <p>Nro de Registro:</p>
+                    <input type="number" placeholder="">
+                </div>
+                <div>
+                    <p>Nro de Celular:</p>
+                    <input type="number" placeholder="">
+                </div>
+            </div>
+            <div class="Seccion Seccion_Fechas ocultar">
+                <div>
+                    <p>Fecha de Solicitud:</p>
+                    <input type="date">
+                </div>
+                <div>
+                    <p>Fecha Estimada de Devolución:</p>
                     <input type="date">
                 </div>
             </div>
-            <div>
-                    
-                <p>Observaciones: </p>
-                <textarea  name="" id="" cols="30" rows="10"></textarea>
-            </div>
+
+
+
             
+            <div class="Seccion ocultar">
+                <div>
+                    <p>¿Es Activo o Material?:</p>
+                    <select name="" id="">
+                        <option value="Seleccionar" selected>Seleccione un Tipo</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Material">Material</option>
+
+                    </select>
+                </div>
+                <div>
+                    <p>Categoria:</p>
+                    <select name="" id="">
+                        <option value="Seleccionar" selected>Seleccione una Categoria</option>
+                        <option value="Categoria">Categoria</option>
+                        <option value="Categoria">Categoria</option>
+
+                    </select>
+
+                </div>
+            </div>
+            <div class="ocultar">
+                <p>Nombre del Activo:</p>
+                <input type="text" placeholder="">
+            </div>
+            <div class="ocultar">
+
+                <p>Materiales a Prestar: </p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="ocultar">
+
+                <p>Observaciones: </p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
             <div class="div_Botones_cancelarYGuardar">
 
                 <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
                 <button class="btn_Agregar">Agregar</button>
-                
+
             </div>
 
-            
 
-            
+
+
         </form>
 
-        
+
     </div>
 </div>
