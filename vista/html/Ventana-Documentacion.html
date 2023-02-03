@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../css/estiloGenerales.css">
     <link rel="stylesheet" href="../css/estiloBarraLateral.css">
     <link rel="stylesheet" href="../css/estiloBarraSuperior.css">
+    <link rel="stylesheet" href="../css/estilo_Vna_AgregarDocumentacion.css">
+
+
 </head>
 
 <header class="header_BarraDeNavegacionDeArriba">
@@ -179,6 +182,68 @@
     
 <body>
 
+
+    <div class="Ventana_AgregarDocumentacion" id="Ventana_AgregarDocumentacion">
+        <div class="Sub_Ventana" id="Sub_VentanaEmergente">
+            <form action="" class="Contenido">
+
+                <div>
+                    <p>Codigo de Formulario:</p>
+                    <input type="number" placeholder="">
+                </div>
+                <div class="ocultar">
+                    <p>Descripcion del Documento:</p>
+                    <input type="text" placeholder="">
+                </div>
+
+                
+                <div class="Seccion Seccion_Fechas ocultar">
+                    <div>
+                        <p>Fecha de Registro:</p>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="Seccion ocultar">
+                    <div>
+                        <p>Codigo VER:</p>
+                        <input type="number" placeholder="">
+                    </div>
+                </div>
+                <div id="" class="">
+                    <p>Seleccione el Estado del Formulario:</p>
+                    <select name=""  onclick="">
+                        <option value="Seleccionar" selected>Estado de Uso</option>
+                        <option value="Vigente">Vigente</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+
+                <div class="Seccion Contenedor_input_file">
+
+                    <input class="input_AñadirArchivo" id="input_AñadirArchivo" type="file">
+                </div>
+
+                <div class="ocultar">
+
+                    <p>Observaciones: </p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="div_Botones_cancelarYGuardar">
+
+                    <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
+                    <button class="btn_Agregar">Agregar</button>
+
+                </div>
+
+
+
+
+            </form>
+
+
+        </div>
+    </div>
    
     <div class="Bloque_principal">
 
@@ -187,7 +252,7 @@
                 
                 <div class="Botones DivConDisplayInlineBlock ">
                    
-                    <div class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
+                    <div id="btn_MostrarVentanaAgregarDocumentacion" class="DivConDisplayFlex divTextoCentradoVerticalYHorizontal_sinFlex">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
                             <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 11.25 19 L 11.25 12.75 L 5 12.75 L 5 11.25 L 11.25 11.25 L 11.25 5 L 12.75 5 L 12.75 11.25 L 19 11.25 L 19 12.75 L 12.75 12.75 L 12.75 19 Z M 11.25 19 "/>
@@ -289,4 +354,7 @@
 
 <script type="text/javascript"
 src="../javascript/FuncionesPrincipales.js"></script>
+
+<script type="text/javascript"
+src="../javascript/funciones_documentacion.js"></script>
 </html>

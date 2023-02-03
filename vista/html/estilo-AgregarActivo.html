@@ -1,96 +1,48 @@
-<link rel="stylesheet" href="../css/estilo_Vna_AgregarPrestamo.css">
+<link rel="stylesheet" href="../css/estilo_Vna_AgregarDocumentacion.css">
 
 
 
-<div class="Ventana_AgregarPrestamo" id="Ventana_AgregarPrestamo">
+<div class="Ventana_AgregarDocumentacion" id="Ventana_AgregarDocumentacion">
     <div class="Sub_Ventana" id="Sub_VentanaEmergente">
         <form action="" class="Contenido">
 
-            <div class="">
-                <p>Prestamo destinado a:</p>
-                <select name="" id="">
-                    <option value="Seleccionar" selected>Seleccione el destino</option>
-                    <option value="Docente">Docente</option>
-                    <option value="Estudiante">Estudiante</option>
-                    <option value="Administrativo">Administrativo</option>
-                </select>
+            <div>
+                <p>Codigo de Formulario:</p>
+                <input type="number" placeholder="">
             </div>
             <div class="ocultar">
-                <p>Nombre del Docente:</p>
+                <p>Descripcion del Documento:</p>
                 <input type="text" placeholder="">
             </div>
-            <div class="ocultar">
-                <p>Nombre del Estudiante:</p>
-                <input type="text" placeholder="">
-            </div>
-            <div class="ocultar">
-                <p>Nombre del Encargado:</p>
-                <input type="text" placeholder="">
-            </div>
-            <div class="ocultar">
-                <p>Area:</p>
-                <input type="text" placeholder="">
-            </div>
-
-            <div class="ocultar">
-                <p>Materia:</p>
-                <input type="text" placeholder="">
-            </div>
-
-            <div class="Seccion ocultar">
-                <div>
-                    <p>Nro de Registro:</p>
-                    <input type="number" placeholder="">
-                </div>
-                <div>
-                    <p>Nro de Celular:</p>
-                    <input type="number" placeholder="">
-                </div>
-            </div>
-            <div class="Seccion Seccion_Fechas ocultar">
-                <div>
-                    <p>Fecha de Solicitud:</p>
-                    <input type="date">
-                </div>
-                <div>
-                    <p>Fecha Estimada de Devolución:</p>
-                    <input type="date">
-                </div>
-            </div>
-
-
 
             
+            <div class="Seccion Seccion_Fechas ocultar">
+                <div>
+                    <p>Fecha de Registro:</p>
+                    <input type="date">
+                </div>
+            </div>
             <div class="Seccion ocultar">
                 <div>
-                    <p>¿Es Activo o Material?:</p>
-                    <select name="" id="">
-                        <option value="Seleccionar" selected>Seleccione un Tipo</option>
-                        <option value="Activo">Activo</option>
-                        <option value="Material">Material</option>
-
-                    </select>
-                </div>
-                <div>
-                    <p>Categoria:</p>
-                    <select name="" id="">
-                        <option value="Seleccionar" selected>Seleccione una Categoria</option>
-                        <option value="Categoria">Categoria</option>
-                        <option value="Categoria">Categoria</option>
-
-                    </select>
-
+                    <p>Codigo VER:</p>
+                    <input type="number" placeholder="">
                 </div>
             </div>
-            <div class="ocultar">
-                <p>Nombre del Activo:</p>
-                <input type="text" placeholder="">
+            <div id="" class="">
+                <p>Seleccione el Estado del Formulario:</p>
+                <select name=""  onclick="">
+                    <option value="Seleccionar" selected>Estado de Uso</option>
+                    <option value="Vigente">Vigente</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
             </div>
-            <div class="ocultar">
+            <div id="btn_añadirArchivo" class="contenedor_inputFile">
+                
+                <p>Añadir Archivo</p>
+                <input id="input_AñadirArchivo" type="file">
 
-                <p>Materiales a Prestar: </p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
+
             <div class="ocultar">
 
                 <p>Observaciones: </p>

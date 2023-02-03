@@ -184,11 +184,11 @@
 
     <div class="Ventana_AgregarPrestamo" id="Ventana_AgregarPrestamo">
         <div class="Sub_Ventana" id="Sub_VentanaEmergente">
-            <form action="" class="Contenido">
+            <form action="" id="form_contenido" class="Contenido">
 
-                <div class="">
+                <div id="select_DestinoPrestamo" class="">
                     <p>Prestamo destinado a:</p>
-                    <select name="" id="select_DestinoPrestamo">
+                    <select name=""  onclick="SeleccionarDestinoPrestamo(this)">
                         <option value="Seleccionar" selected>Seleccione el destino</option>
                         <option value="Docente">Docente</option>
                         <option value="Estudiante">Estudiante</option>
@@ -196,8 +196,8 @@
                     </select>
                 </div>
                 <div class="ocultar" id="input_NombreDeDocente">
-                    <p>Nombre del Docente:</p>
-                    <input type="text" placeholder="">
+                        <p>Nombre del Docente:</p>
+                        <input type="text" placeholder="">
                 </div>
                 <div class="ocultar" id="input_NombreDelEstudiante">
                     <p>Nombre del Estudiante:</p>
@@ -217,12 +217,12 @@
                     <input type="text" placeholder="">
                 </div>
 
-                <div class="Seccion ocultar">
-                    <div id="input_NroDeRegistroEstudiante">
+                <div class="Seccion ">
+                    <div class="ocultar" id="input_NroDeRegistroEstudiante">
                         <p>Nro de Registro:</p>
                         <input type="number" placeholder="">
                     </div>
-                    <div id="input_NroDeCelular">
+                    <div class="ocultar" id="input_NroDeCelular">
                         <p>Nro de Celular:</p>
                         <input type="number" placeholder="">
                     </div>
@@ -233,54 +233,35 @@
                         <input type="date">
                     </div>
                     <div>
-                        <p>Fecha Estimada de Devolución:</p>
+                        <p>Fecha de Devolución:</p>
                         <input type="date">
                     </div>
                 </div>
 
-
-
                 
-                <div class="Seccion ocultar">
-                    <div id="Selects_ActivoOMaterial">
-                        <p>¿Es Activo o Material?:</p>
-                        <select name="" id="">
-                            <option value="Seleccionar" selected>Seleccione un Tipo</option>
-                            <option value="Activo">Activo</option>
-                            <option value="Material">Material</option>
-
-                        </select>
-                    </div>
-                    <div id="Selects_Categoria">
-                        <p>Categoria:</p>
-                        <select name="" id="">
-                            <option value="Seleccionar" selected>Seleccione una Categoria</option>
-                            <option value="Categoria">Categoria</option>
-                            <option value="Categoria">Categoria</option>
-
-                        </select>
-
-                    </div>
-                </div>
-                <div class="ocultar">
+                <div class="ocultar" id="input_nombreDelActivo">
                     <p>Nombre del Activo:</p>
                     <input type="text" placeholder="">
                 </div>
-                <div class="ocultar">
+                <div id="NuevosActivos">
 
-                    <p>Materiales a Prestar: </p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
-                <div class="ocultar">
+                <div class="Cont_Btn_AgregarMasActivos ocultar" onclick="AñadirMasActivos()" id="btn_agregarMasActivos">
+                    <p> Agregar otro Activo</p>
+                </div>
+                <p id="ContadorDeACtivos" style="visibility: hidden; font-size: xx-small;">1</p>
+
+                <div class="ocultar" id="input_Observaciones">
 
                     <p>Observaciones: </p>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
+                
 
-                <div class="div_Botones_cancelarYGuardar">
+                <div class="div_Botones_cancelarYGuardar" id="Btns_cancelarGuardar">
 
                     <button id="btn_CerrarVentana" class="btn_Cancelar">Cancelar</button>
-                    <button class="btn_Agregar ocultar">Agregar</button>
+                    <button id="btn_guardarPrestamo" class="btn_Agregar ocultar">Agregar</button>
 
                 </div>
 

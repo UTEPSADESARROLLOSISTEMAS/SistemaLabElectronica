@@ -6,7 +6,6 @@
 .Ventana_AgregarPrestamo form{
 
     max-height: 800px;
-    
 }
 .Ventana_AgregarPrestamo{
     z-index: 101;
@@ -35,11 +34,25 @@
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    padding: 0px 100px;
+    padding: 0px 10px;
 }
 
+
+.Ventana_AgregarPrestamo .Sub_Ventana .Contenido .Cont_Btn_AgregarMasActivos{
+    background-color: #2B373E;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
 .Ventana_AgregarPrestamo .Sub_Ventana .Contenido > div{
-    margin: 10px 0px;
+    margin: 10px 10px;
 }
 
 .Ventana_AgregarPrestamo .Sub_Ventana .Contenido .Seccion{
@@ -49,7 +62,7 @@
     margin: 0px 5px;
 }
 .Ventana_AgregarPrestamo .Sub_Ventana .Contenido input{
-    padding: 10px 0px;
+    padding: 10px 00px;
     width: 100%;
     border: none;
     border-radius: 20px;
@@ -60,7 +73,8 @@
 
 .Ventana_AgregarPrestamo .Sub_Ventana .Contenido p{
     font-family: Montserrat;
-    margin: 5px 0px;
+    width: 100%;
+    margin: 5px 10px;
     font-size: small;
 }
 
@@ -94,6 +108,7 @@
     width:100%;
     
 }
+
 .Ventana_AgregarPrestamo .Sub_Ventana .Contenido .div_Botones_cancelarYGuardar{
     display: flex;
     justify-content: center;
