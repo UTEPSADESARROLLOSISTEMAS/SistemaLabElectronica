@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Laboratorio de Sistemas</title>
 
-    <?php include "./vista/inclusiones/Links_DeLibrerias.php"; ?>
+    <?php include "./vistas/inclusiones/Links_DeLibrerias.php"; ?>
 
 </head>
 
@@ -20,31 +20,33 @@
 
     $vistas=$IV->obtener_vistas_controlador();
 
-    if($vistas == "login" || $vistas == "404"){
+    if($vistas == "404"){
 
-        require_once "./vistas/contenidos/".$vistas."-vista.php";
+        require_once "./vistas/contenido/".$vistas."-vista.php";
+
     }else{
 
     ?>
     <!--------------------------------- Contenedor General ----------------------->
-    <main class="full-box main-container">
+    <main>
         <!------------------Inicio----------------------- Barra de Navegacion lateral -------------Inicio----------------------->
 
-        <?php include "./vistas/inc/NavLateral.php"; ?>
+        <?php include "./vistas/inclusiones/Navegador_Lateral.php"; ?>
 
 
 
         <!------------------FIN----------------------- Barra de Navegacion lateral -------------FIN----------------------->
 
         <!-------------------------Inicio----------------------- Contenido de la Pagina ---------Inicio--------------------------------------->
-        <section class="full-box page-content" style="background-color: white;">
+        <section class="full-box page-content">
+       
+                
 
-            <?php include "./vistas/inc/NavBar.php";
-            include $vistas;
+            <?php 
             
+            include "./vistas/inclusiones/Navegador_encabezado.php";
+            require_once "./vistas/contenido/".$vistas."-vista.php";
             ?>
-
-
 
         </section>
         <!-------------------------FIN----------------------- Contenido de la Pagina ---------FIN--------------------------------------->
@@ -54,7 +56,7 @@
 
     <?php
     }
-    include "./vistas/inc/Script.php"  ?>
+    include "./vistas/inclusiones/Links_DeJavascript.php"  ?>
 </body>
 
 </html>

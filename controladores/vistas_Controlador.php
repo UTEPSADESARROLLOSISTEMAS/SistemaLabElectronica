@@ -16,19 +16,23 @@ class vistasControlador extends vistasModelo{
         /*---------Controlador para obtener la Vistas-----------------*/
 
         public function obtener_vistas_controlador(){
+            
+            $url_extraida = $_SERVER["REQUEST_URI"];
+            $ruta = explode("/",$url_extraida);
 
-            if(isset($_GET['views'])){
+            if($ruta[2] != ""){
 
-                $ruta = explode("/",$_GET['views']);
-                $respuesta=vistasModelo::obtener_vistas_model($ruta[0]);
+                
+                $respuesta = vistasModelo::obtener_vistas_model($ruta[2]);
+                return $respuesta;
 
 
             }else{
 
-                $respuesta ="login";
+                $respuesta ="Inicio";
+                return $respuesta;
 
             }
-            return $respuesta;
 
 
         }
