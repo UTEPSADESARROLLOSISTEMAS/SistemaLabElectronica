@@ -1,8 +1,12 @@
 <?php
 
-/* Nombre de la aplicaciòn */
+const SERVER = "localhost";
+const DB = "sistema-lab-mecanica"; //nombre de la base de datos
+const USER = "root";
+const PASS = "";
 
-define("SERVERURL", "http://localhost/SistemaLabUtepsa/");
-define("COMPANY", "UTEPSA");
-define("MONEDA", "Bs");
-date_default_timezone_set("America/La_Paz");
+const SGBD = "mysql:host=".SERVER.";dbname=".DB; //constante para ingresar a la base de datos
+
+const METHOD ="AES-256-CBC";
+const SECRET_KEY = 'UT3P$@_L@B_M3C@NIC@';
+const SECRET_IV = '090994'; //Pass fundacion Utepsa
