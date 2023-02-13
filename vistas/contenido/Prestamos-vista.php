@@ -323,3 +323,4 @@
 
 
 
+<script type="text/javascript" src="<?php echo SERVERURL;?>vistas/javascript/funciones_prestamos.js"></script>

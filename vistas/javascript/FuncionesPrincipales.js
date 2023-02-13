@@ -1,4 +1,8 @@
+
+var SERVERURL  = "http://10.10.13.78/SistemaLabUtepsa/";
+
 /* Se Obtiene el id de los div de las opciones de la barra lateral*/ 
+
 let btn_OpcionTablero = document.getElementById("BtnOpcion_Tablero");
 let btn_OpcionInventario = document.getElementById("BtnOpcion_Inventario");
 let btn_OpcionUsoDelaboratorio = document.getElementById("BtnOpcion_UsoDeLaboratorio");
@@ -21,25 +25,26 @@ btn_OpcionSalir.onclick = CerrarSesion;
 
 /*Funciones que redirigen a sus respectivos Links de la pagina*/ 
 function Redirigir_a_la_Ventana_Tablero() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-paginaPrincipal.html";
+    window.location.href = SERVERURL+"Inicio";
 }
 function Redirigir_a_la_Ventana_Inventario() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-inventario.html";
+    window.location.href = SERVERURL+"Inventario";
 }
 function Redirigir_a_la_Ventana_UsodeLaboratorio() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-usoLaboratorio.html";
+    window.location.href = SERVERURL+"usoDeLaboratorio";
 }
 function Redirigir_a_la_Ventana_Prestamos() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-Prestamos.html";
+    window.location.href = SERVERURL+"Prestamos";
 }
 function Redirigir_a_la_Ventana_Documentacion() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-Documentacion.html";
+    window.location.href = SERVERURL+"Documentacion";
 }
 function Redirigir_a_la_Ventana_Reportes() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-Reportes.html";
+
+    window.location.href = SERVERURL+"Reportes";
 }
 function Redirigir_a_la_Ventana_Configuracion() {
-    window.location.href = "http://10.2.11.1:5500/vistas/html/Ventana-Configuracion.html";
+    window.location.href = SERVERURL + "Configuracion";
 }
 function CerrarSesion() {
     alert("Cerrar Sesión");

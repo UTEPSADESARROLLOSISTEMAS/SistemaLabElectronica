@@ -1,7 +1,7 @@
 <?php
 
 const SERVER = "localhost";
-const DB = "sistema-lab-mecanica"; //nombre de la base de datos
+const DB = "SistemaLabUtepsa"; //nombre de la base de datos
 const USER = "root";
 const PASS = "";
 

@@ -513,4 +513,6 @@
 
     </div>
 </div>
-    
+
+
+<script type="text/javascript" src="<?php echo SERVERURL;?>vistas/javascript/funciones_Inventario.js"></script>
