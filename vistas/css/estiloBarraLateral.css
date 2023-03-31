@@ -1,11 +1,3 @@
-@font-face{
-    font-family: "Ubuntu";
-    src: url('../Fuentes/Ubuntu/Ubuntu-Medium.ttf') format('truetype');}
-
-@font-face{
-    font-family: "Open_Sans";
-    src: url('../Fuentes/Open_Sans/static/OpenSans/OpenSans-Medium.ttf') format('truetype');}
-
 /*---------------Menu lateral-------------*/
 #boton_desplegarMenu{
     display: none;
@@ -32,7 +24,6 @@
     position: absolute;
     right: 5px;
     top: 10px;
-    border-radius: 20px;
     color: #fff;
     cursor: pointer;
     font-size: 18px;
@@ -42,130 +33,61 @@
     max-width: 300px;
     background: white;
     height: 100%;
-    border-radius: 20px;
     position: relative;
     transition: all 500ms ease;
     transform: translateX(-100%);
 }
-.BloqueLateral-Contenedor .Navegador{
+.BloqueLateral-Contenedor .Navegador_Lateral{
     width: 100%;
 }
-.BloqueLateral-Contenedor .Navegador .Perfil{
-    padding-top: 30px;
-}
 
-.BloqueLateral-Contenedor .Navegador .Perfil svg{
-    
-    max-width: 50px;
-    max-height: 50px;
-    width: 40px;
-    height: 40px;
-    min-width: 10px;
-    min-height: 10px;
-    fill: #cf152d;
 
-}
-.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor div{
-    padding: 0px 10px;
-    display: inline-block;
-
-}
-
-.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor hr{
-    height: 0.5px;
-    background-color: #00000043;
-    border-radius: 20px;
-}
-.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor .TextoDeNombre{
-    font-family: Open_Sans;
-    font-size: 12px;
-    color: gray;
-}
-.BloqueLateral-Contenedor .Navegador .Perfil .Contenedor .TextoDeRol{
-    font-family: Ubuntu;
-
-}
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones{
-    font-family: Ubuntu;
-}
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones svg{
-    
-    max-width: 50px;
-    max-height: 50px;
-    width: 40px;
-    height: 40px;
-    min-width: 10px;
-    min-height: 10px;
-    padding: 0px 20px;
-    
-}
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion{
-    padding: 5px 0px;
-    color: #cf152d;
-    border-radius: 20px;
-    fill: #cf152d;
-
-}
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion svg{
-    
-    max-width: 50px;
-    max-height: 50px;
-    width: 40px;
-    height: 40px;
-    min-width: 10px;
-    min-height: 10px;
-    padding: 0px 20px;
-}
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion div{
-    width: 50%;
-    cursor: pointer;
-}
-
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion .ContenedorDelIcono{
-    display: flex;
-    justify-content: center;
-}
-
-.BloqueLateral-Contenedor .Navegador .ContenedorOpciones .Opcion:hover{
-    background-color: #cf152d;
-    color: white;
-    
-    fill: white;
-}
-
-/*Pestaña opcion De Tablero*/
-.nav-div-ContenedorDeOpciones{
-    width: 100%;
-    height: 100px;
+.Navegador_Lateral .contenedorDePerfil{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+}
 
+.Navegador_Lateral .contenedorDePerfil > *{
+
+    margin: 0px 10px;
+    fill: #D61F31;
+    font-family: Montserrat_Bold;
 }
-.nav-div-ContenedorDeOpciones-contenido{
+.Navegador_Lateral li{
     display: flex;
-    border-radius: 20px;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    margin: 10px 5px;
+    fill: #D61F31;
+    padding: 0px 10px;
 }
-.nav-div-ContenedorDeOpciones-Subcontenido:hover{
-    background-color: #cf152d;
-    color: white;
+.Navegador_Lateral li:hover{
+    background-color: #D61F31;
+    border-radius: 15px;
+    color: #fff;
     fill: white;
-    cursor: pointer;
+
+}
+.Navegador_Lateral svg{
+    max-width: 50px;
+    max-height: 50px;
 }
 
-.nav-div-ContenedorDeOpciones-Subcontenido{
+.Navegador_Lateral a{
+    text-decoration: none;
+    color: #D61F31;
     width: 100%;
-    height: 100%;
-    display: flex;
-    border-radius: 20px;
-}
+    text-align: center;
+    font-family: Montserrat_SemiBold;
 
-.nav-div-ContenedorDeOpciones1_1{
-    width: 50%;
 }
-.nav-div-ContenedorDeOpciones1_2{
-    width: 50%;
-    display: flex;
+.Navegador_Lateral a:hover{
+    color: white;
 }
+.Navegador_Lateral hr{
+    margin: 20px 10px;
 
-/*Fin de Menù lateral*/
+}

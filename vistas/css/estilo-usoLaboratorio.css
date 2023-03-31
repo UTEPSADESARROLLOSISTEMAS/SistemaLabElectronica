@@ -1,59 +1,63 @@
-.Bloque_Sub_Principal{
-    
+
+.Bloque_principal > div{
+    margin: 10px 0px;
+}
+
+.Bloque_Sub_Principal_1{
     font-family: Montserrat_SemiBold;
 }
-.Bloque_Sub_Principal .Seccion_1{
-    width: 70%;
-    min-width: 320px;
+.Bloque_Sub_Principal_1 .Seccion_1{
+    width: 100%;
 }
-.Bloque_Sub_Principal .Seccion_2{
+.Bloque_Sub_Principal_1 .Seccion_2{
     width: 29%;
     min-width: 320px;
 }
 
-.Bloque_Sub_Principal .Seccion_1 .Botones{
+.Bloque_Sub_Principal_1 .Seccion_1 .Botones{
     padding: 5px 10px;
+    margin: 0px 10px;
     min-width: 120px;
     background-color: white;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.Bloque_Sub_Principal .Seccion_1 .Botones label{
+.Bloque_Sub_Principal_1 .Seccion_1 .Botones label{
     cursor: pointer;
 }
-.Bloque_Sub_Principal .Seccion_1 .Botones svg{
+.Bloque_Sub_Principal_1 .Seccion_1 .Botones svg{
     width: 30px;
     height: 30px;
     min-width: 15px;
     min-height: 15px;
 }
-.Bloque_Sub_Principal .Seccion_1 .Botones:hover{
+.Bloque_Sub_Principal_1 .Seccion_1 .Botones:hover{
     fill: white;
     color: white;
     background-color: #CF152D;
 
 }
 
-.Bloque_Sub_Principal .Seccion_1 .Botones p{
+.Bloque_Sub_Principal_1 .Seccion_1 .Botones p{
     padding-left: 10px;
 
 }
 
 
-.Bloque_Sub_Principal .Seccion_2 .Boton{
+.Bloque_Sub_Principal_1 .Seccion_2 .Boton{
     display: flex;
     justify-content: end;
 
 }
 
-.Bloque_Sub_Principal .Seccion_2 .Boton svg{
+.Bloque_Sub_Principal_1 .Seccion_2 .Boton svg{
     width: 30px;
     height: 30px;
     min-width: 15px;
     min-height: 15px;
 }
-.Bloque_Sub_Principal .Seccion_2 .Boton .contenido{
+.Bloque_Sub_Principal_1 .Seccion_2 .Boton .contenido{
     
     width: fit-content;
     padding: 10px 5px;
@@ -66,14 +70,14 @@
     cursor: pointer;
 
 }
-.Bloque_Sub_Principal .Seccion_2 .Boton .contenido:hover{
+.Bloque_Sub_Principal_1 .Seccion_2 .Boton .contenido:hover{
 
     fill: white;
     color: white;
     background-color: #CF152D;
 }
 
-.Bloque_Sub_Principal .Seccion_2 .Boton .contenido p{
+.Bloque_Sub_Principal_1 .Seccion_2 .Boton .contenido p{
 
     padding: 10px;
     
@@ -89,7 +93,6 @@
     padding: 10px;
     border-radius: 20px;
 }
-
 .Bloque_SubPrincipal_2_div_ContenedorIcono svg{
     margin: 10px;
     max-width: 50px;
@@ -102,7 +105,6 @@
 .DivDatoExtraido{
     min-width: 320px;
     width: 24.5%;
-    margin: 5px 2px;
     display: inline-block;
 }
 .DivDatoExtraido hr{
@@ -149,12 +151,37 @@
 }
 
 /*BLOQUE SUBPRINCIPAL 3*/
+.Bloque_SubPrincipal_3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bloque_SubPrincipal_3 > div{
+    width: 50%;
+}
 
 
+/**/
 .ContenedorDeLasTabla{
     width: 100%;
     min-width: 320px;
+
+
 }
+
+.cont_icono_mostrar{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.cont_icono_mostrar svg{
+    max-width: 35px;
+    max-height: 35px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
 .DivConlaTabla{
     background-color: white;
     border-radius: 20px;
@@ -188,4 +215,11 @@
 
     box-shadow: 0px 5px rgba(0, 0, 0, 0.221);
     padding: 10px 0px;
+}
+
+
+.ic_Lapiz_Editar{
+    cursor: pointer;
+    fill: #4462FF;
+
 }

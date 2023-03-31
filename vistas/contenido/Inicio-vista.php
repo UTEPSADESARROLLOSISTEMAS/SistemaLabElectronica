@@ -1,8 +1,13 @@
 
 <link rel="stylesheet" href="<?php echo SERVERURL;?>vistas/css/estilo-Inicio.css">
-   
+    
+    
+<?php  
+ require_once "../SistemaLabUtepsa/controladores/inicio_Controlador.php";
+
+?>
     <div class="Bloque_principal">
-        
+            
             <div class="Bloque_SubPrincipal_1">
 
                 <div class="DivDatoExtraido">
@@ -12,7 +17,7 @@
                     <div class="ContenedorIcono divContenedorVerde">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                             <g id="surface1">
-                            <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 4.300781 21 C 3.601562 21 3.105469 20.675781 2.8125 20.023438 C 2.519531 19.375 2.617188 18.785156 3.101562 18.25 L 9.300781 11.25 L 9.300781 4.5 L 8 4.5 C 7.785156 4.5 7.605469 4.429688 7.460938 4.289062 C 7.320312 4.144531 7.25 3.964844 7.25 3.75 C 7.25 3.535156 7.320312 3.355469 7.460938 3.210938 C 7.605469 3.070312 7.785156 3 8 3 L 16 3 C 16.214844 3 16.394531 3.070312 16.539062 3.210938 C 16.679688 3.355469 16.75 3.535156 16.75 3.75 C 16.75 3.964844 16.679688 4.144531 16.539062 4.289062 C 16.394531 4.429688 16.214844 4.5 16 4.5 L 14.699219 4.5 L 14.699219 11.25 L 20.898438 18.25 C 21.382812 18.785156 21.480469 19.375 21.1875 20.023438 C 20.894531 20.675781 20.398438 21 19.699219 21 Z M 4 19.5 L 20 19.5 L 13.199219 11.800781 L 13.199219 4.5 L 10.800781 4.5 L 10.800781 11.800781 Z M 11.949219 12 Z M 11.949219 12 "/>
+                            <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 10.773438 20.648438 L 4.5 20.648438 C 4.101562 20.648438 3.75 20.5 3.449219 20.199219 C 3.148438 19.898438 3 19.550781 3 19.148438 L 3 4.601562 C 3 4.199219 3.128906 3.851562 3.386719 3.550781 C 3.644531 3.25 3.867188 3.101562 4.050781 3.101562 L 9.101562 3.101562 C 9.214844 2.515625 9.503906 2.039062 9.960938 1.664062 C 10.421875 1.289062 10.949219 1.101562 11.550781 1.101562 C 12.148438 1.101562 12.679688 1.289062 13.136719 1.664062 C 13.597656 2.039062 13.882812 2.515625 14 3.101562 L 19.050781 3.101562 C 19.449219 3.101562 19.800781 3.25 20.101562 3.550781 C 20.398438 3.851562 20.550781 4.199219 20.550781 4.601562 L 20.550781 9.675781 L 19.050781 9.675781 L 19.050781 4.601562 L 16.398438 4.601562 L 16.398438 7.851562 L 7.148438 7.851562 L 7.148438 4.601562 L 4.5 4.601562 L 4.5 19.148438 L 10.773438 19.148438 Z M 15.5 20.023438 L 11.5 16.023438 L 12.574219 14.949219 L 15.5 17.875 L 21.476562 11.898438 L 22.550781 12.976562 Z M 12 4.5 C 12.285156 4.5 12.519531 4.402344 12.710938 4.210938 C 12.902344 4.019531 13 3.785156 13 3.5 C 13 3.214844 12.902344 2.980469 12.710938 2.789062 C 12.519531 2.597656 12.285156 2.5 12 2.5 C 11.714844 2.5 11.480469 2.597656 11.289062 2.789062 C 11.097656 2.980469 11 3.214844 11 3.5 C 11 3.785156 11.097656 4.019531 11.289062 4.210938 C 11.480469 4.402344 11.714844 4.5 12 4.5 Z M 12 4.5 "/>
                             </g>
                         </svg>
                     </div>
@@ -24,7 +29,7 @@
                                 <p style="color: #5B5B5B;">Reservas Confirmadas</p>
                             </div>
                             <div class="divTextoCentradoVertical_y_Horizontal TextResultados">
-                                <p style="color:black;">000</p>
+                                <p style="color:black;"><?php inicio_Controlador::ExtraerCantidad("ReservasConfirmadas");?></p>
                             </div>
                             <hr>
                             <div class="divTextoCentradoVertical_y_Horizontal TextTitulos_Bold">
@@ -58,7 +63,7 @@
                                     <p style="color: #5B5B5B;">Solicitudes de Reservas</p>
                                 </div>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextResultados">
-                                    <p style="color:black;">000</p>
+                                    <p style="color:black;"><?php inicio_Controlador::ExtraerCantidad("SolicitudesDeReserva");?></p>
                                 </div>
                                 <hr>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextTitulos_Bold">
@@ -78,10 +83,11 @@
 
                     <div>
                         <div class="ContenedorIcono
-                        divContenedorAmarillo">
+                        divContenedorRojo">
+                        
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                                 <g id="surface1">
-                                <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 19.199219 21 L 12.925781 14.726562 L 14.351562 13.300781 L 20.625 19.574219 Z M 4.675781 21 L 3.25 19.574219 L 10.5 12.324219 L 7.824219 9.648438 L 7.25 10.226562 L 6.148438 9.125 L 6.148438 11.25 L 5.550781 11.851562 L 2.5 8.800781 L 3.101562 8.199219 L 5.25 8.199219 L 4.050781 7 L 7.324219 3.726562 C 7.609375 3.441406 7.917969 3.25 8.25 3.148438 C 8.582031 3.050781 8.949219 3 9.351562 3 C 9.75 3 10.117188 3.070312 10.449219 3.210938 C 10.785156 3.355469 11.089844 3.566406 11.375 3.851562 L 8.699219 6.523438 L 9.898438 7.726562 L 9.300781 8.324219 L 11.898438 10.925781 L 14.949219 7.875 C 14.816406 7.660156 14.710938 7.410156 14.636719 7.125 C 14.5625 6.839844 14.523438 6.542969 14.523438 6.226562 C 14.523438 5.339844 14.847656 4.578125 15.488281 3.9375 C 16.128906 3.296875 16.890625 2.976562 17.773438 2.976562 C 18.023438 2.976562 18.238281 3 18.414062 3.050781 C 18.585938 3.101562 18.734375 3.167969 18.851562 3.25 L 16.726562 5.375 L 18.601562 7.25 L 20.726562 5.125 C 20.808594 5.257812 20.878906 5.421875 20.9375 5.613281 C 20.996094 5.804688 21.023438 6.023438 21.023438 6.273438 C 21.023438 7.160156 20.703125 7.921875 20.0625 8.5625 C 19.421875 9.203125 18.660156 9.523438 17.773438 9.523438 C 17.476562 9.523438 17.214844 9.503906 17 9.460938 C 16.785156 9.421875 16.582031 9.359375 16.398438 9.273438 Z M 4.675781 21 "/>
+                                <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 4.5 21 C 4.082031 21 3.730469 20.855469 3.4375 20.5625 C 3.144531 20.269531 3 19.917969 3 19.5 L 3 4.5 C 3 4.082031 3.144531 3.730469 3.4375 3.4375 C 3.730469 3.144531 4.082031 3 4.5 3 L 9.625 3 C 9.707031 2.417969 9.976562 1.9375 10.425781 1.5625 C 10.875 1.1875 11.398438 1 12 1 C 12.601562 1 13.125 1.1875 13.574219 1.5625 C 14.023438 1.9375 14.292969 2.417969 14.375 3 L 19.5 3 C 19.917969 3 20.269531 3.144531 20.5625 3.4375 C 20.855469 3.730469 21 4.082031 21 4.5 L 21 19.5 C 21 19.917969 20.855469 20.269531 20.5625 20.5625 C 20.269531 20.855469 19.917969 21 19.5 21 Z M 4.5 19.5 L 19.5 19.5 L 19.5 4.5 L 4.5 4.5 Z M 7 17 L 13.824219 17 L 13.824219 15.5 L 7 15.5 Z M 7 12.75 L 17 12.75 L 17 11.25 L 7 11.25 Z M 7 8.5 L 17 8.5 L 17 7 L 7 7 Z M 12 4.074219 C 12.234375 4.074219 12.4375 3.988281 12.613281 3.8125 C 12.789062 3.636719 12.875 3.433594 12.875 3.199219 C 12.875 2.964844 12.789062 2.761719 12.613281 2.585938 C 12.4375 2.414062 12.234375 2.324219 12 2.324219 C 11.765625 2.324219 11.5625 2.414062 11.386719 2.585938 C 11.210938 2.761719 11.125 2.964844 11.125 3.199219 C 11.125 3.433594 11.210938 3.636719 11.386719 3.8125 C 11.5625 3.988281 11.765625 4.074219 12 4.074219 Z M 4.5 19.5 L 4.5 4.5 Z M 4.5 19.5 "/>
                                 </g>
                             </svg>
                         </div>
@@ -90,14 +96,14 @@
                             <div class="divContenedorDatosExtraidos1_1">
 
                                 <div class="divTextoAlaDerecha TextTitulos">
-                                    <p style="color: #5B5B5B;">Mantenimientos de Activos</p>
+                                    <p style="color: #5B5B5B;">Tareas Asignadas</p>
                                 </div>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextResultados">
-                                    <p style="color:black;">000</p>
+                                    <p style="color:black;"><?php inicio_Controlador::ExtraerCantidad("TareasAsignadas");?></p>
                                 </div>
                                 <hr>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextTitulos_Bold">
-                                    <p style="color: #5B5B5B;">Ver los Mantenimientos</p>
+                                    <p style="color: #5B5B5B;">Ver las Tareas Asignadas</p>
                                 </div>
 
                             </div>
@@ -105,43 +111,43 @@
 
                         </div>
                     </div>
-                   
+                
                     
 
                 </div>
                 <div class="DivDatoExtraido">
 
                     <div>
-                        <div class="ContenedorIcono divContenedorRojo">
+                        <div class="ContenedorIcono divContenedorMorado">
                                                 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                                 <g id="surface1">
-                                <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 4.5 21 C 4.082031 21 3.730469 20.855469 3.4375 20.5625 C 3.144531 20.269531 3 19.917969 3 19.5 L 3 4.5 C 3 4.082031 3.144531 3.730469 3.4375 3.4375 C 3.730469 3.144531 4.082031 3 4.5 3 L 9.625 3 C 9.707031 2.417969 9.976562 1.9375 10.425781 1.5625 C 10.875 1.1875 11.398438 1 12 1 C 12.601562 1 13.125 1.1875 13.574219 1.5625 C 14.023438 1.9375 14.292969 2.417969 14.375 3 L 19.5 3 C 19.917969 3 20.269531 3.144531 20.5625 3.4375 C 20.855469 3.730469 21 4.082031 21 4.5 L 21 19.5 C 21 19.917969 20.855469 20.269531 20.5625 20.5625 C 20.269531 20.855469 19.917969 21 19.5 21 Z M 4.5 19.5 L 19.5 19.5 L 19.5 4.5 L 4.5 4.5 Z M 7 17 L 13.824219 17 L 13.824219 15.5 L 7 15.5 Z M 7 12.75 L 17 12.75 L 17 11.25 L 7 11.25 Z M 7 8.5 L 17 8.5 L 17 7 L 7 7 Z M 12 4.074219 C 12.234375 4.074219 12.4375 3.988281 12.613281 3.8125 C 12.789062 3.636719 12.875 3.433594 12.875 3.199219 C 12.875 2.964844 12.789062 2.761719 12.613281 2.585938 C 12.4375 2.414062 12.234375 2.324219 12 2.324219 C 11.765625 2.324219 11.5625 2.414062 11.386719 2.585938 C 11.210938 2.761719 11.125 2.964844 11.125 3.199219 C 11.125 3.433594 11.210938 3.636719 11.386719 3.8125 C 11.5625 3.988281 11.765625 4.074219 12 4.074219 Z M 4.5 19.5 L 4.5 4.5 Z M 4.5 19.5 "/>
+                                <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 17.273438 22 C 15.976562 22 14.863281 21.539062 13.9375 20.613281 C 13.011719 19.6875 12.550781 18.574219 12.550781 17.273438 C 12.550781 15.976562 13.011719 14.863281 13.9375 13.9375 C 14.863281 13.011719 15.976562 12.550781 17.273438 12.550781 C 18.574219 12.550781 19.6875 13.011719 20.613281 13.9375 C 21.539062 14.863281 22 15.976562 22 17.273438 C 22 18.574219 21.539062 19.6875 20.613281 20.613281 C 19.6875 21.539062 18.574219 22 17.273438 22 Z M 18.726562 19.800781 L 19.425781 19.101562 L 17.550781 17.226562 L 17.550781 14.425781 L 16.574219 14.425781 L 16.574219 17.574219 Z M 4.5 20.648438 C 4.082031 20.648438 3.730469 20.503906 3.4375 20.210938 C 3.144531 19.921875 3 19.566406 3 19.148438 L 3 4.601562 C 3 4.183594 3.128906 3.828125 3.386719 3.539062 C 3.644531 3.246094 3.867188 3.101562 4.050781 3.101562 L 9.101562 3.101562 C 9.214844 2.515625 9.503906 2.039062 9.960938 1.664062 C 10.421875 1.289062 10.949219 1.101562 11.550781 1.101562 C 12.148438 1.101562 12.679688 1.289062 13.136719 1.664062 C 13.597656 2.039062 13.882812 2.515625 14 3.101562 L 19.050781 3.101562 C 19.464844 3.101562 19.820312 3.246094 20.113281 3.539062 C 20.402344 3.828125 20.550781 4.183594 20.550781 4.601562 L 20.550781 11.976562 C 20.300781 11.824219 20.054688 11.695312 19.8125 11.585938 C 19.570312 11.480469 19.316406 11.382812 19.050781 11.300781 L 19.050781 4.601562 L 16.398438 4.601562 L 16.398438 7.851562 L 7.148438 7.851562 L 7.148438 4.601562 L 4.5 4.601562 L 4.5 19.148438 L 11.324219 19.148438 C 11.410156 19.398438 11.507812 19.644531 11.625 19.886719 C 11.742188 20.128906 11.882812 20.382812 12.050781 20.648438 Z M 12 4.5 C 12.285156 4.5 12.519531 4.402344 12.710938 4.210938 C 12.902344 4.019531 13 3.785156 13 3.5 C 13 3.214844 12.902344 2.980469 12.710938 2.789062 C 12.519531 2.597656 12.285156 2.5 12 2.5 C 11.714844 2.5 11.480469 2.597656 11.289062 2.789062 C 11.097656 2.980469 11 3.214844 11 3.5 C 11 3.785156 11.097656 4.019531 11.289062 4.210938 C 11.480469 4.402344 11.714844 4.5 12 4.5 Z M 12 4.5 "/>
                                 </g>
                             </svg>
         
                         </div>
-    
+
                         <div class="divContenedorDatosExtraidos_BloquePrincipal1">
                             <div class="divContenedorDatosExtraidos1_1">
-    
+
                                 <div class="divTextoAlaDerecha TextTitulos">
-                                    <p style="color: #5B5B5B;">Tareas Pendientes</p>
+                                    <p style="color: #5B5B5B;">Prestamos de Activos</p>
                                 </div>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextResultados">
-                                    <p style="color:black;">000</p>
+                                    <p style="color:black;"><?php inicio_Controlador::ExtraerCantidad("PrestamosDeActivos");?></p>
                                 </div>
                                 <hr>
                                 <div class="divTextoCentradoVertical_y_Horizontal TextTitulos_Bold Open_Sans_Bold">
-                                    <p style="color: #5B5B5B;">Ver las Tareas Pendientes</p>
+                                    <p style="color: #5B5B5B;">Ver los Prestamos</p>
                                 </div>
-    
+
                             </div>
                             
-    
+
                         </div>
                     </div>
-                   
+                
                     
 
                 </div>
@@ -153,60 +159,38 @@
                         <div class="DivConlaTabla">
 
                             <div class="divTextoCentradoVertical_y_Horizontal" style="padding: 10px 0px;">
-                                <p class="Text_Montserrat_SemiBold">Detalle de las Reservas</p>
+                                <p class="Text_Montserrat_SemiBold">Auxiliares de Laboratorio</p>
                             </div>
                             <table class="TablaMadre">
                                 <tr>
-                                  <td>
-                                     <table  cellspacing="0" cellpadding="1" class="TablaMadre_SubTabla_1">
-                                       <tr class="Text_Montserrat_SemiBold">
-                                          <th class="Columna_50">Nombre</th>
-                                          <th class="Columna_20">Horario</th>
-                                          <th class="Columna_15">Tareas A.</th>
-                                          <th class="Columna_15">Estado</th>
-                                       </tr>
-                                     </table>
-                                  </td>
+                                <td>
+                                    <table  cellspacing="0" cellpadding="1" class="TablaMadre_SubTabla_1">
+                                    <tr class="Text_Montserrat_SemiBold">
+                                        <th class="Columna_50">Nombre</th>
+                                        <th class="Columna_20">Horario</th>
+                                        <th class="Columna_15">Tareas A.</th>
+                                        <th class="Columna_15">Estado</th>
+                                    </tr>
+                                    </table>
+                                </td>
                                 </tr>
                                 <tr>
-                                  <td class="TextOpen_Sans">
-                                     <div class="Div_DeLa_SubTabla">
-                                       <table  cellspacing="0" cellpadding="1" class="SubTabla colorGris70Transparencia">
-                                         <tr>
-                                           <td class="Columna_50">Nombre_apellido</td>
-                                           <td class="Columna_20">00:00 - 00:00</td>
-                                           <td class="Columna_15">000</td>
-                                           <td class="Columna_15" style="color: green;">Activo</td>
-                                         </tr>
-                                         <tr>
-                                            <td class="Columna_50">Nombre_apellido</td>
-                                            <td class="Columna_20">00:00 - 00:00</td>
-                                            <td class="Columna_15">000</td>
-                                            <td class="Columna_15" style="color: green;">Activo</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="Columna_50">Nombre_apellido</td>
-                                            <td class="Columna_20">00:00 - 00:00</td>
-                                            <td class="Columna_15">000</td>
-                                            <td class="Columna_15" style="color: green;">Activo</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="Columna_50">Nombre_apellido</td>
-                                            <td class="Columna_20">00:00 - 00:00</td>
-                                            <td class="Columna_15">000</td>
-                                            <td class="Columna_15" style="color: green;">Activo</td>
-                                          </tr>
-                                         <tr>
-                                            <td class="Columna_50">Nombre_apellido</td>
-                                            <td class="Columna_20">00:00 - 00:00</td>
-                                            <td class="Columna_15">000</td>
-                                            <td class="Columna_15" style="color: red;">Inactivo</td>
-                                          </tr>
-                                       </table>  
-                                     </div>
-                                  </td>
+                                <td class="TextOpen_Sans">
+                                    <div class="Div_DeLa_SubTabla">
+                                    <table  cellspacing="0" cellpadding="1" class="SubTabla colorGris70Transparencia">
+                                        <tr>
+                                        <td class="Columna_50">Nombre_apellido</td>
+                                        <td class="Columna_20">00:00 - 00:00</td>
+                                        <td class="Columna_15">000</td>
+                                        <td class="Columna_15" style="color: green;">Activo</td>
+                                        </tr>
+                                        <?php inicio_Controlador::ExtraerTablas("Auxiliares");?>
+
+                                    </table>  
+                                    </div>
+                                </td>
                                 </tr>
-                              </table>
+                            </table>
         
                             <div class="DivConTexto divTextoAlaDerecha TextUbuntu_Bold">
                                 <p style="cursor: pointer;">Ver más...</p>
@@ -220,27 +204,30 @@
                             <div class="Cardview">
                                 <p class="Txt_Titulo">Soporte a Estudiantes</p>
                                 <div class="Seccion fill_Color_Verde">
-                                    <p>000</p>
+                                    <p><?php inicio_Controlador::ExtraerCantidad("SoporteAEstudiantes");?></p>
                                                                         
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"viewBox="0 0 24 24" version="1.1">
-                                        <g id="surface1">
-                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 12 22 C 10.617188 22 9.316406 21.738281 8.101562 21.210938 C 6.882812 20.6875 5.824219 19.976562 4.925781 19.074219 C 4.023438 18.175781 3.3125 17.117188 2.789062 15.898438 C 2.261719 14.683594 2 13.382812 2 12 C 2 10.617188 2.261719 9.316406 2.789062 8.101562 C 3.3125 6.882812 4.023438 5.824219 4.925781 4.925781 C 5.824219 4.023438 6.882812 3.3125 8.101562 2.789062 C 9.316406 2.261719 10.617188 2 12 2 C 13.382812 2 14.683594 2.261719 15.898438 2.789062 C 17.117188 3.3125 18.175781 4.023438 19.074219 4.925781 C 19.976562 5.824219 20.6875 6.882812 21.210938 8.101562 C 21.738281 9.316406 22 10.617188 22 12 C 22 13.382812 21.738281 14.683594 21.210938 15.898438 C 20.6875 17.117188 19.976562 18.175781 19.074219 19.074219 C 18.175781 19.976562 17.117188 20.6875 15.898438 21.210938 C 14.683594 21.738281 13.382812 22 12 22 Z M 8.976562 20 L 10.550781 16.25 C 9.917969 16.035156 9.355469 15.6875 8.863281 15.210938 C 8.371094 14.738281 8 14.160156 7.75 13.476562 L 4 14.976562 C 4.515625 16.160156 5.199219 17.183594 6.050781 18.050781 C 6.898438 18.917969 7.875 19.566406 8.976562 20 Z M 7.726562 10.550781 C 7.992188 9.867188 8.367188 9.285156 8.851562 8.800781 C 9.332031 8.316406 9.890625 7.964844 10.523438 7.75 L 9.023438 4 C 7.773438 4.515625 6.714844 5.210938 5.851562 6.085938 C 4.984375 6.960938 4.367188 7.949219 4 9.050781 Z M 12 15 C 12.832031 15 13.542969 14.707031 14.125 14.125 C 14.707031 13.542969 15 12.832031 15 12 C 15 11.167969 14.707031 10.457031 14.125 9.875 C 13.542969 9.292969 12.832031 9 12 9 C 11.167969 9 10.457031 9.292969 9.875 9.875 C 9.292969 10.457031 9 11.167969 9 12 C 9 12.832031 9.292969 13.542969 9.875 14.125 C 10.457031 14.707031 11.167969 15 12 15 Z M 15.023438 20 C 16.175781 19.535156 17.175781 18.871094 18.023438 18.011719 C 18.875 17.152344 19.535156 16.160156 20 15.023438 L 16.25 13.476562 C 16 14.175781 15.628906 14.761719 15.136719 15.238281 C 14.644531 15.710938 14.082031 16.050781 13.449219 16.25 Z M 16.25 10.523438 L 20 8.976562 C 19.535156 7.839844 18.871094 6.847656 18.011719 5.988281 C 17.152344 5.128906 16.160156 4.464844 15.023438 4 L 13.5 7.75 C 14.132812 7.964844 14.683594 8.3125 15.148438 8.789062 C 15.617188 9.261719 15.984375 9.839844 16.25 10.523438 Z M 16.25 10.523438 "/>
-                                        </g>
-                                    </svg>
-    
-                                </div>
-                            </div>
-                            <div class="Cardview">
-                                <p class="Txt_Titulo">Activos por Agotarse</p>
-                                <div class="Seccion fill_Color_Amarillo">
-                                    <p>000</p>
                                                                         
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                                         <g id="surface1">
-                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 3.074219 23 L 3.074219 18.75 C 2.507812 18.535156 2.019531 18.179688 1.613281 17.6875 C 1.203125 17.195312 1 16.660156 1 16.074219 L 1 6.125 L 3.074219 6.125 L 3.074219 1.75 C 3.074219 1.515625 3.140625 1.332031 3.273438 1.199219 C 3.410156 1.066406 3.589844 1 3.824219 1 C 4.058594 1 4.242188 1.066406 4.375 1.199219 C 4.507812 1.332031 4.574219 1.515625 4.574219 1.75 L 4.574219 6.125 L 6.648438 6.125 L 6.648438 16.074219 C 6.648438 16.660156 6.449219 17.195312 6.050781 17.6875 C 5.648438 18.179688 5.160156 18.535156 4.574219 18.75 L 4.574219 23 Z M 11.25 23 L 11.25 18.75 C 10.683594 18.535156 10.195312 18.179688 9.789062 17.6875 C 9.378906 17.195312 9.175781 16.660156 9.175781 16.074219 L 9.175781 6.125 L 11.25 6.125 L 11.25 1.75 C 11.25 1.515625 11.316406 1.332031 11.449219 1.199219 C 11.582031 1.066406 11.765625 1 12 1 C 12.234375 1 12.417969 1.066406 12.550781 1.199219 C 12.683594 1.332031 12.75 1.515625 12.75 1.75 L 12.75 6.125 L 14.824219 6.125 L 14.824219 16.074219 C 14.824219 16.660156 14.625 17.195312 14.226562 17.6875 C 13.824219 18.179688 13.332031 18.535156 12.75 18.75 L 12.75 23 Z M 19.425781 23 L 19.425781 18.75 C 18.859375 18.535156 18.371094 18.179688 17.960938 17.6875 C 17.554688 17.195312 17.351562 16.660156 17.351562 16.074219 L 17.351562 6.125 L 19.425781 6.125 L 19.425781 1.75 C 19.425781 1.515625 19.492188 1.332031 19.625 1.199219 C 19.757812 1.066406 19.941406 1 20.175781 1 C 20.410156 1 20.589844 1.066406 20.726562 1.199219 C 20.859375 1.332031 20.925781 1.515625 20.925781 1.75 L 20.925781 6.125 L 23 6.125 L 23 16.074219 C 23 16.660156 22.796875 17.195312 22.386719 17.6875 C 21.980469 18.179688 21.492188 18.535156 20.925781 18.75 L 20.925781 23 Z M 2.5 7.625 L 2.5 12.226562 L 5.148438 12.226562 L 5.148438 7.625 Z M 10.675781 7.625 L 10.675781 12.226562 L 13.324219 12.226562 L 13.324219 7.625 Z M 18.851562 7.625 L 18.851562 12.226562 L 21.5 12.226562 L 21.5 7.625 Z M 3.824219 17.324219 C 4.191406 17.324219 4.503906 17.195312 4.761719 16.9375 C 5.019531 16.679688 5.148438 16.367188 5.148438 16 L 5.148438 13.726562 L 2.5 13.726562 L 2.5 16 C 2.5 16.367188 2.628906 16.679688 2.886719 16.9375 C 3.144531 17.195312 3.457031 17.324219 3.824219 17.324219 Z M 12 17.324219 C 12.367188 17.324219 12.679688 17.195312 12.9375 16.9375 C 13.195312 16.679688 13.324219 16.367188 13.324219 16 L 13.324219 13.726562 L 10.675781 13.726562 L 10.675781 16 C 10.675781 16.367188 10.804688 16.679688 11.0625 16.9375 C 11.320312 17.195312 11.632812 17.324219 12 17.324219 Z M 20.175781 17.324219 C 20.542969 17.324219 20.855469 17.195312 21.113281 16.9375 C 21.371094 16.679688 21.5 16.367188 21.5 16 L 21.5 13.726562 L 18.851562 13.726562 L 18.851562 16 C 18.851562 16.367188 18.980469 16.679688 19.238281 16.9375 C 19.496094 17.195312 19.808594 17.324219 20.175781 17.324219 Z M 3.824219 12.976562 Z M 12 12.976562 Z M 20.175781 12.976562 Z M 2.5 12.226562 L 5.148438 12.226562 Z M 10.675781 12.226562 L 13.324219 12.226562 Z M 18.851562 12.226562 L 21.5 12.226562 Z M 3.824219 13.726562 L 2.5 13.726562 L 5.148438 13.726562 Z M 12 13.726562 L 10.675781 13.726562 L 13.324219 13.726562 Z M 20.175781 13.726562 L 18.851562 13.726562 L 21.5 13.726562 Z M 20.175781 13.726562 "/>
+                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 2 20 L 2 17.75 L 4.148438 17.75 L 4.148438 5.5 C 4.148438 5.085938 4.296875 4.734375 4.589844 4.441406 C 4.882812 4.148438 5.238281 4 5.648438 4 L 21.148438 4 L 21.148438 5.5 L 5.648438 5.5 L 5.648438 17.75 L 11.5 17.75 L 11.5 20 Z M 13.976562 20 C 13.699219 20 13.46875 19.886719 13.28125 19.664062 C 13.09375 19.4375 13 19.183594 13 18.898438 L 13 7.976562 C 13 7.699219 13.09375 7.46875 13.28125 7.28125 C 13.46875 7.09375 13.699219 7 13.976562 7 L 20.769531 7 C 21.089844 7 21.375 7.085938 21.625 7.261719 C 21.875 7.4375 22 7.675781 22 7.976562 L 22 18.90625 C 22 19.214844 21.878906 19.476562 21.636719 19.6875 C 21.394531 19.894531 21.109375 20 20.773438 20 Z M 14.5 17.75 L 20.5 17.75 L 20.5 8.5 L 14.5 8.5 Z M 14.5 17.75 "/>
                                         </g>
                                     </svg>
-    
+
+
+                                </div>
+                            </div>
+                            <div class="Cardview">
+                                <p class="Txt_Titulo">Soporte a Docentes</p>
+                                <div class="Seccion fill_Color_Amarillo">
+                                    <p><?php inicio_Controlador::ExtraerCantidad("SoporteADocentes");?></p>
+                                                                        
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
+                                        <g id="surface1">
+                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 2 20 L 2 17.75 L 4.148438 17.75 L 4.148438 5.5 C 4.148438 5.085938 4.296875 4.734375 4.589844 4.441406 C 4.882812 4.148438 5.238281 4 5.648438 4 L 21.148438 4 L 21.148438 5.5 L 5.648438 5.5 L 5.648438 17.75 L 11.5 17.75 L 11.5 20 Z M 13.976562 20 C 13.699219 20 13.46875 19.886719 13.28125 19.664062 C 13.09375 19.4375 13 19.183594 13 18.898438 L 13 7.976562 C 13 7.699219 13.09375 7.46875 13.28125 7.28125 C 13.46875 7.09375 13.699219 7 13.976562 7 L 20.769531 7 C 21.089844 7 21.375 7.085938 21.625 7.261719 C 21.875 7.4375 22 7.675781 22 7.976562 L 22 18.90625 C 22 19.214844 21.878906 19.476562 21.636719 19.6875 C 21.394531 19.894531 21.109375 20 20.773438 20 Z M 14.5 17.75 L 20.5 17.75 L 20.5 8.5 L 14.5 8.5 Z M 14.5 17.75 "/>
+                                        </g>
+                                    </svg>
+
+
                                 </div>
                             </div>
                             
@@ -249,7 +236,7 @@
                             <div class="Cardview">
                                 <p class="Txt_Titulo">Objetos Perdidos</p>
                                 <div class="Seccion fill_Color_Amarillo">
-                                    <p>000</p>
+                                    <p><?php inicio_Controlador::ExtraerCantidad("ObjetosPerdidos");?></p>
                                                                         
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                                         <g id="surface1">
@@ -259,12 +246,12 @@
                                 </div>
                             </div>
                             <div class="Cardview">
-                                <p class="Txt_Titulo">Activos Agotados</p>
-                                <div class="Seccion fill_Color_Rojo">
-                                    <p>000</p>
+                                <p class="Txt_Titulo">Objetos Perdidos Devueltos</p>
+                                <div class="Seccion fill_Color_Verde">
+                                    <p><?php inicio_Controlador::ExtraerCantidad("ObjetosPerdidosDevueltos");?></p>
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1">
                                         <g id="surface1">
-                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 12 16.976562 C 12.234375 16.976562 12.4375 16.886719 12.613281 16.710938 C 12.789062 16.539062 12.875 16.332031 12.875 16.101562 C 12.875 15.867188 12.789062 15.664062 12.613281 15.488281 C 12.4375 15.3125 12.234375 15.226562 12 15.226562 C 11.765625 15.226562 11.5625 15.3125 11.386719 15.488281 C 11.210938 15.664062 11.125 15.867188 11.125 16.101562 C 11.125 16.332031 11.210938 16.539062 11.386719 16.710938 C 11.5625 16.886719 11.765625 16.976562 12 16.976562 Z M 11.25 13.375 L 12.75 13.375 L 12.75 6.800781 L 11.25 6.800781 Z M 8.25 21 L 3 15.75 L 3 8.25 L 8.25 3 L 15.75 3 L 21 8.25 L 21 15.75 L 15.75 21 Z M 8.875 19.5 L 15.125 19.5 L 19.5 15.125 L 19.5 8.875 L 15.125 4.5 L 8.875 4.5 L 4.5 8.875 L 4.5 15.125 Z M 12 12 Z M 12 12 "/>
+                                        <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 5.5 22 C 5.082031 22 4.730469 21.855469 4.4375 21.5625 C 4.144531 21.269531 4 20.917969 4 20.5 L 4 7.75 C 4 6.832031 4.285156 6.039062 4.851562 5.363281 C 5.417969 4.6875 6.132812 4.265625 7 4.101562 L 7 2 L 9.5 2 L 9.5 4 L 14.5 4 L 14.5 2 L 17 2 L 17 4.101562 C 17.867188 4.265625 18.582031 4.6875 19.148438 5.363281 C 19.714844 6.039062 20 6.832031 20 7.75 L 20 20.5 C 20 20.917969 19.855469 21.269531 19.5625 21.5625 C 19.269531 21.855469 18.917969 22 18.5 22 Z M 5.5 20.5 L 18.5 20.5 L 18.5 7.75 C 18.5 7.117188 18.285156 6.582031 17.851562 6.148438 C 17.417969 5.714844 16.882812 5.5 16.25 5.5 L 7.75 5.5 C 7.132812 5.5 6.605469 5.714844 6.164062 6.148438 C 5.722656 6.582031 5.5 7.117188 5.5 7.75 Z M 15.5 15.75 L 17 15.75 L 17 12.25 L 7 12.25 L 7 13.75 L 15.5 13.75 Z M 5.5 20.5 L 18.5 20.5 Z M 5.5 20.5 "/>
                                         </g>
                                     </svg>
                                     
@@ -279,78 +266,38 @@
                 <div class="DivConlaTabla">
 
                     <div class="divTextoCentradoVertical_y_Horizontal" style="padding: 10px 0px;">
-                        <p class="Text_Montserrat_SemiBold">Detalle de las Reservas</p>
+                        <p class="Text_Montserrat_SemiBold">Reservas para Hoy</p>
                     </div>
                     <table class="TablaMadre">
                         <tr>
-                          <td>
-                             <table  cellspacing="0" cellpadding="1" class="TablaMadre_SubTabla_1">
-                               <tr class="Text_Montserrat_SemiBold">
-                                  <th class="Columna_50">Materia / Titulo Lab.</th>
-                                  <th class="Columna_20">Horario</th>
-                                  <th class="Columna_15">Lugar</th>
-                                  <th class="Columna_15">Cant. Est.</th>
-                               </tr>
-                             </table>
-                          </td>
+                        <td>
+                            <table  cellspacing="0" cellpadding="1" class="TablaMadre_SubTabla_1">
+                            <tr class="Text_Montserrat_SemiBold">
+                                <th class="Columna_50">Materia / Titulo Lab.</th>
+                                <th class="Columna_20">Horario</th>
+                                <th class="Columna_15">Lugar</th>
+                                <th class="Columna_15">Cant. Est.</th>
+                            </tr>
+                            </table>
+                        </td>
                         </tr>
                         <tr>
-                          <td class="TextOpen_Sans">
-                             <div class="Div_DeLa_SubTabla">
-                               <table  cellspacing="0" cellpadding="1" class="SubTabla colorGris70Transparencia">
-                                 <tr>
-                                   <td class="Columna_50">Nombre_apellido</td>
-                                   <td class="Columna_20">00:00 - 00:00</td>
-                                   <td class="Columna_15">N-000</td>
-                                   <td class="Columna_15">000</td>
-                                 </tr>
-                                 <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="Columna_50">Nombre_apellido</td>
-                                    <td class="Columna_20">00:00 - 00:00</td>
-                                    <td class="Columna_15">N-000</td>
-                                    <td class="Columna_15">000</td>
-                                  </tr>
-                               </table>  
-                             </div>
-                          </td>
+                        <td class="TextOpen_Sans">
+                            <div class="Div_DeLa_SubTabla">
+                            <table  cellspacing="0" cellpadding="1" class="SubTabla colorGris70Transparencia">
+                                <tr>
+                                <td class="Columna_50">Nombre_apellido</td>
+                                <td class="Columna_20">00:00 - 00:00</td>
+                                <td class="Columna_15">N-000</td>
+                                <td class="Columna_15">000</td>
+                                </tr>
+                                <?php inicio_Controlador::ExtraerTablas("ReservasParaHoy");?>
+
+                            </table>  
+                            </div>
+                        </td>
                         </tr>
-                      </table>
+                    </table>
 
                     <div class="DivConTexto divTextoAlaDerecha TextUbuntu_Bold">
                         <p style="cursor: pointer;">Ver más...</p>
@@ -359,8 +306,6 @@
 
                 </div>
             </div>
-           
+        
             
     </div>
-
-    

@@ -29,7 +29,7 @@ class vistasControlador extends vistasModelo{
 
             }else{
 
-                $respuesta ="Inicio";
+                $respuesta ="login";
                 return $respuesta;
 
             }

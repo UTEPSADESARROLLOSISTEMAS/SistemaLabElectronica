@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="<?php echo SERVERURL;?>vistas/css/estilo-Vna_AgregarGrupoDeActivos.css">
 <link rel="stylesheet" href="<?php echo SERVERURL;?>vistas/css/estilo-Vna_BuscarEnInventario.css">
 
+<?php  
+ require_once "../SistemaLabUtepsa/controladores/inventario_Controlador.php";
+
+?>
 
 <div class="Ventana_AgregarActivo" id="Ventana_AgregarActivo">
     <div class="Sub_Ventana" id="Sub_VentanaEmergente">
@@ -264,8 +268,8 @@
                 <div class="Elemento_al_50Porciento divTextoCentradoVerticalYHorizontal_sinFlex  ElementoCentradoHorizontal_y_Vertical">
 
                     <div>
-                        <p class="TextUbuntu_Bold txt_ExtraGrande" >00</p>
-                        <p class="TextOpen_Sans">Cantidad de Activos</p>
+                        <p class="TextUbuntu_Bold txt_ExtraGrande" > <?php inventario_Controlador::ExtraerCantidad("En Inventario");?></p>
+                        <p class="TextOpen_Sans">Activos En Inventario</p>
                     </div>
                 </div>
                 
@@ -292,8 +296,8 @@
 
                     <div>
                         
-                        <p class="TextUbuntu_Bold txt_ExtraGrande">00</p>
-                        <p class="TextOpen_Sans">Activos por agotarse</p>
+                        <p class="TextUbuntu_Bold txt_ExtraGrande"><?php inventario_Controlador::ExtraerCantidad("En Mantenimiento");?></p>
+                        <p class="TextOpen_Sans">Activos en Mantenimiento</p>
 
                     </div>
                 </div>
@@ -321,8 +325,8 @@
 
                     <div>
                         
-                        <p class="TextUbuntu_Bold txt_ExtraGrande">00</p>
-                        <p class="TextOpen_Sans">Activos Agotados</p>
+                        <p class="TextUbuntu_Bold txt_ExtraGrande"><?php inventario_Controlador::ExtraerCantidad("Fuera de Servicio");?></p>
+                        <p class="TextOpen_Sans">Activos Fuera de Servicio</p>
 
                     </div>
                 </div>
@@ -350,7 +354,7 @@
 
                     <div>
                         
-                        <p class="TextUbuntu_Bold txt_ExtraGrande">00</p>
+                        <p class="TextUbuntu_Bold txt_ExtraGrande"><?php inventario_Controlador::ExtraerCantidad("En Prestamo");?></p>
                         <p class="TextOpen_Sans">Activos Prestados</p>
 
                     </div>
@@ -388,54 +392,7 @@
                         <td>
                             <div class="Div_DeLa_SubTabla">
                             <table  cellspacing="0" cellpadding="1" class="SubTabla TextOpen_Sans colorGris70Transparencia">
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td class="Columna_20">Preventivo</td>
-                                </tr>
+                                <?php inventario_Controlador::ExtraerTablas("Mantenimientos Programados");?>
                             </table>  
                             </div>
                         </td>
@@ -454,7 +411,7 @@
             <div class="DivConlaTabla">
 
                 <div class="divTextoCentradoVertical_y_Horizontal">
-                    <p class="Text_Montserrat_SemiBold">Activos en Reparación</p>
+                    <p class="Text_Montserrat_SemiBold">Cantidad de activos en el inventario</p>
                 </div>
 
                 <table class="TablaMadre">
@@ -462,11 +419,9 @@
                         <td>
                             <table  cellspacing="0" cellpadding="1" class="TablaMadre_SubTabla_1 TextMontserrat">
                             <tr>
-                                <th class="Columna_15">Codigo</th>
-                                <th class="Columna_50">Nombre Activo</th>
-                                <th class="Columna_15">Fecha de la Falla</th>
-                                <th class="Columna_10">Problema</th>
-                                <th class="Columna_10">Estado</th>
+                                <th class="Columna_30">Grupo de Activo</th>
+                                <th class="Columna_50">Categoria</th>
+                                <th class="Columna_20">Cantidad de Activos</th>
                             </tr>
                             </table>
                         </td>
@@ -475,27 +430,10 @@
                         <td>
                             <div class="Div_DeLa_SubTabla">
                             <table  cellspacing="0" cellpadding="1" class="SubTabla TextOpen_Sans colorGris70Transparencia">
-                            <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td style="cursor: pointer; color: blue;" class="Columna_10">Ver</td>
-                                <td style="cursor: pointer; color: #13A53C;" class="Columna_10">Reparado</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td style="cursor: pointer; color: blue;" class="Columna_10">Ver</td>
-                                <td style="cursor: pointer; color: #D2C54F;" class="Columna_10">En Proceso</td>
-                                </tr>
-                                <tr>
-                                <td class="Columna_15">0000000000000</td>
-                                <td class="Columna_50">Nombre_Activo</td>
-                                <td class="Columna_15">00/00/0000</td>
-                                <td style="cursor: pointer; color: blue;" class="Columna_10">Ver</td>
-                                <td style="cursor: pointer; color: #D61F31;" class="Columna_10">En Espera</td>
-                                </tr>
+                                
+                                <?php inventario_Controlador::ExtraerTablas("Activos En Inventario");?>
+
+                              
                             </table>  
                             </div>
                         </td>

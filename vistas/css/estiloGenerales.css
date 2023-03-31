@@ -208,3 +208,12 @@ body{
 .Text_Montserrat_Bold{
     font-family: Montserrat_Bold;
 }
+
+
+.textoAmarillo{
+    color: #a99f41;
+}
+
+.ElementoClick{
+    cursor: pointer;
+}
